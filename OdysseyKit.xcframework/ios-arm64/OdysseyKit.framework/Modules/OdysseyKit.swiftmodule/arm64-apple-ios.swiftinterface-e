@@ -1,0 +1,124 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name OdysseyKit
+import Combine
+import Foundation
+import KMPNativeCoroutinesAsync
+import Odyssey
+import SVGView
+import Swift
+import SwiftUI
+import UIKit.UIFont
+import UIKit
+import UIPilot
+import _Concurrency
+public enum OdysseyKitAsset {
+  public static let checkmark: OdysseyKit.OdysseyKitImages
+  public static let chevronLeft: OdysseyKit.OdysseyKitImages
+  public static let chevronRight: OdysseyKit.OdysseyKitImages
+}
+public struct OdysseyKitImages {
+  public var name: Swift.String {
+    get
+  }
+  public typealias Image = UIKit.UIImage
+  public var image: OdysseyKit.OdysseyKitImages.Image {
+    get
+  }
+}
+extension UIKit.UIImage {
+  @available(macOS, deprecated, message: "This initializer is unsafe on macOS, please use the OdysseyKitImages.image property")
+  convenience public init?(asset: OdysseyKit.OdysseyKitImages)
+}
+@_inheritsConvenienceInitializers @objc public class OdysseyKitResources : ObjectiveC.NSObject {
+  @objc public class var bundle: Foundation.Bundle {
+    @objc get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum OdysseyKitFontFamily {
+  public enum HedvigLetters {
+    public static let small: OdysseyKit.OdysseyKitFontConvertible
+    public static let standard: OdysseyKit.OdysseyKitFontConvertible
+    public static let all: [OdysseyKit.OdysseyKitFontConvertible]
+  }
+  public static let allCustomFonts: [OdysseyKit.OdysseyKitFontConvertible]
+  public static func registerAllCustomFonts()
+}
+public struct OdysseyKitFontConvertible {
+  public let name: Swift.String
+  public let family: Swift.String
+  public let path: Swift.String
+  public typealias Font = UIKit.UIFont
+  public func font(size: CoreGraphics.CGFloat) -> OdysseyKit.OdysseyKitFontConvertible.Font
+  public func register()
+}
+extension UIKit.UIFont {
+  convenience public init?(font: OdysseyKit.OdysseyKitFontConvertible, size: CoreGraphics.CGFloat)
+}
+public struct OdysseyDefaultStyling {
+  public static func install()
+}
+public func initialize()
+@_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class HostingView<Content> : UIKit.UIView where Content : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public var swiftUIRootView: Content {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) required public init(rootView: Content)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func willMove(toSuperview newSuperview: UIKit.UIView?)
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func systemLayoutSizeFitting(_ targetSize: CoreGraphics.CGSize) -> CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreGraphics.CGSize {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func systemLayoutSizeFitting(_ targetSize: CoreGraphics.CGSize, withHorizontalFittingPriority horizontalFittingPriority: UIKit.UILayoutPriority, verticalFittingPriority: UIKit.UILayoutPriority) -> CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreGraphics.CGSize) -> CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeToFit()
+}
+@_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AdjustableHostingController<Content> : SwiftUI.UIHostingController<Content> where Content : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) override public init(rootView: Content)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillLayoutSubviews()
+  @objc deinit
+}
+extension SwiftUI.View {
+  public func introspectScrollView(_ foundScrollView: @escaping (_ scrollView: UIKit.UIScrollView) -> Swift.Void) -> some SwiftUI.View
+  
+  public func introspectTextField(_ foundTextField: @escaping (_ textField: UIKit.UITextField) -> Swift.Void) -> some SwiftUI.View
+  
+}
+public struct ForceScrollViewIndicatorInset : SwiftUI.ViewModifier {
+  public init(insetBottom: CoreGraphics.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func body(content: OdysseyKit.ForceScrollViewIndicatorInset.Content) -> some SwiftUI.View
+  
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit29ForceScrollViewIndicatorInsetV4body7contentQr7SwiftUI01_E16Modifier_ContentVyACG_tF", 0) __
+}
+public struct ContentOffsetModifier<Modifier> : SwiftUI.ViewModifier where Modifier : SwiftUI.ViewModifier {
+  public init(modifier: @escaping (UIKit.UIScrollView, CoreGraphics.CGPoint) -> Modifier)
+  @_Concurrency.MainActor(unsafe) public func body(content: OdysseyKit.ContentOffsetModifier<Modifier>.Content) -> some SwiftUI.View
+  
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit21ContentOffsetModifierV4body7contentQr7SwiftUI05_Viewe1_C0VyACyxGG_tF", 0) __<Modifier>
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var viewController: UIKit.UIViewController? {
+    get
+  }
+}
+public struct TransferEnvironment : SwiftUI.ViewModifier {
+  public init(environment: SwiftUI.EnvironmentValues)
+  @_Concurrency.MainActor(unsafe) public func body(content: OdysseyKit.TransferEnvironment.Content) -> some SwiftUI.View
+  
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit19TransferEnvironmentV4body7contentQr7SwiftUI21_ViewModifier_ContentVyACG_tF", 0) __
+}
+@_Concurrency.MainActor(unsafe) public struct RootView : SwiftUI.View, Swift.Identifiable {
+  @_Concurrency.MainActor(unsafe) public var id: Swift.String {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public init(name: Swift.String, initialURL: Swift.String = "/")
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit8RootViewV4bodyQrvp", 0) __
+  public typealias ID = Swift.String
+}
