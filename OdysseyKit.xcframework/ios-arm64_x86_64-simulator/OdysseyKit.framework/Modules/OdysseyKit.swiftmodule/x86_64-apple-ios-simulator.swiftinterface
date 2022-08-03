@@ -76,8 +76,6 @@ public struct DefaultStyling {
   public static func install()
 }
 public enum Fonts {
-  public static var hedvigLettersStandard: UIKit.UIFont
-  public static var hedvigLettersSmall: UIKit.UIFont
   public static var forceTraitCollection: UIKit.UITraitCollection?
   public static func fontFor(style: OdysseyKit.HFontTextStyle) -> UIKit.UIFont
 }

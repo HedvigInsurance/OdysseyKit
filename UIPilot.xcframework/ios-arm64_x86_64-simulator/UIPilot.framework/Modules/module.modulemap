@@ -1,4 +1,0 @@
-framework module UIPilot {
-  header "UIPilot-Swift.h"
-  requires objc
-}

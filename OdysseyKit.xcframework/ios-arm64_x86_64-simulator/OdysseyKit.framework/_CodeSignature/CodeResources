@@ -4,37 +4,13 @@
 <dict>
 	<key>files</key>
 	<dict>
-		<key>Assets.car</key>
-		<data>
-		nZfR92Dmwk9Uu0FosNALPCRXQnk=
-		</data>
 		<key>Headers/OdysseyKit-Swift.h</key>
 		<data>
 		ey3nMZ6rNV5LwujjUwydspzggLk=
 		</data>
-		<key>HedvigLetters-Small.otf</key>
-		<data>
-		mduXa9dtkdV6nYDgaB/k4SrKSYs=
-		</data>
-		<key>HedvigLetters-Standard.otf</key>
-		<data>
-		Cf7U7bFQ/SbpZf+nTcuUa7p0tNk=
-		</data>
 		<key>Info.plist</key>
 		<data>
 		uK54UkIVIrPVlNpjH573GJpfUiA=
-		</data>
-		<key>LaunchScreen.storyboardc/01J-lp-oVM-view-tBh-zb-z8w.nib</key>
-		<data>
-		/VvGj0dOxMJ2N8g21dgW8hxMqww=
-		</data>
-		<key>LaunchScreen.storyboardc/Info.plist</key>
-		<data>
-		Qd8qgj4DALsWZFCQyqlmHP+6i+c=
-		</data>
-		<key>LaunchScreen.storyboardc/Launch.nib</key>
-		<data>
-		71eJPSFGhckwlmp9tBrEZKsUiB8=
 		</data>
 		<key>Modules/OdysseyKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -42,11 +18,11 @@
 		</data>
 		<key>Modules/OdysseyKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		TWKz9xJrbMtXem5TPHg7lwPXelI=
+		F+fJsCgP8BrKZkgd2/On5YlXQ4I=
 		</data>
 		<key>Modules/OdysseyKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		HBWw7ixEjz+tsJ8lawRp+e6Xbw8=
+		HRKkI48Ok5klILHNbMGWue69wbk=
 		</data>
 		<key>Modules/OdysseyKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -54,74 +30,36 @@
 		</data>
 		<key>Modules/OdysseyKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		5JQGOvVPU3B7kxLssrFcq8lq2ek=
+		3bagf6iExKMwdTpelYB0bFHiPZI=
 		</data>
 		<key>Modules/OdysseyKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		Hd7zsPzv74dThyJTcpXwYFOSGlk=
+		7tYKpXJlz0xMFVura5C6i3D1piU=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		kQbDQs6GM/K0zP8XmvWwZpG6vyA=
 		</data>
-		<key>SVGView_SVGView.bundle/Info.plist</key>
-		<data>
-		U2G3YfaWM1iInfsYJTSaCFmEO8g=
-		</data>
 	</dict>
 	<key>files2</key>
 	<dict>
-		<key>Assets.car</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			YZcrQ3GdsUvkceTcgvcWEVzWFNP9LVjjA/J921DfZ+E=
-			</data>
-		</dict>
 		<key>Headers/OdysseyKit-Swift.h</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			ey3nMZ6rNV5LwujjUwydspzggLk=
+			</data>
 			<key>hash2</key>
 			<data>
 			qkAEnkq5FxJMOw3YwLPxHbABGYuHYgTOfHz0KHT2hqk=
 			</data>
 		</dict>
-		<key>HedvigLetters-Small.otf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			i/lul1rth4ktaIrkhXGsLWaODmuOV1HdPicaJrSyrV4=
-			</data>
-		</dict>
-		<key>HedvigLetters-Standard.otf</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			9IdkfZXQxhHZvCEDJUhPCE/qgqc252WVo+R/X2/GiYE=
-			</data>
-		</dict>
-		<key>LaunchScreen.storyboardc/01J-lp-oVM-view-tBh-zb-z8w.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			nSaPlXZz7PspMrHhn/MVoyGmEQuZE7OqgihlBDt5GzY=
-			</data>
-		</dict>
-		<key>LaunchScreen.storyboardc/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			hYcnMatvNfn+LcWNCKcCx/0ZeEFQyB/lDFRy8WPvTUA=
-			</data>
-		</dict>
-		<key>LaunchScreen.storyboardc/Launch.nib</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			KTEbQwUm2JZfXKUmqoeEv43K32RUFx+yyCA3o1Ew7fs=
-			</data>
-		</dict>
 		<key>Modules/OdysseyKit.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			5gdLiq5m9MxrRsNpXKo8lgIDPnI=
+			</data>
 			<key>hash2</key>
 			<data>
 			unF1qqR7QBahX3yOq8GblU6R1mHGv9j4fLfqHpV2RbU=
@@ -129,20 +67,32 @@
 		</dict>
 		<key>Modules/OdysseyKit.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			F+fJsCgP8BrKZkgd2/On5YlXQ4I=
+			</data>
 			<key>hash2</key>
 			<data>
-			tmxA8GgUFCOU4T8v7RdlJjOH8+LCbVy9PSBZpQZcYvE=
+			L9kic/d7xMJPeLYc961i8065b9dngl0joPF0RdFu9Q4=
 			</data>
 		</dict>
 		<key>Modules/OdysseyKit.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			HRKkI48Ok5klILHNbMGWue69wbk=
+			</data>
 			<key>hash2</key>
 			<data>
-			+lwl93qCn7IQ3kZ4bol1skjrYV93hLTXWpVRZwQmZEY=
+			xv3Hqot8qUjCTpaHbK2tcK8UFJVDcWpKWxH2TZ5xEOA=
 			</data>
 		</dict>
 		<key>Modules/OdysseyKit.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			xROu3voiqbzRSIF5tWXpTC8/bc8=
+			</data>
 			<key>hash2</key>
 			<data>
 			MfhxRgA0pC3kttHpIsBiGKbY/bfjSAgiVzLVE2O3TA0=
@@ -150,30 +100,35 @@
 		</dict>
 		<key>Modules/OdysseyKit.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			3bagf6iExKMwdTpelYB0bFHiPZI=
+			</data>
 			<key>hash2</key>
 			<data>
-			C1gjHYPOiEsNKNOkkN97nr593EgXQbOV38p5lu5Bsdo=
+			fIBByQu2OZzn2OO7Rol3OhZdIy0wgv5ooip0BJq21LY=
 			</data>
 		</dict>
 		<key>Modules/OdysseyKit.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			7tYKpXJlz0xMFVura5C6i3D1piU=
+			</data>
 			<key>hash2</key>
 			<data>
-			BKz90ngill0322PvkjV6ga6JJHHWNi9dZGmZ9vn/+9Y=
+			qbq+j2ID5adQ00EM42c/r8QdMwbAEyFMsTeUFNOWdR8=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
 		<dict>
+			<key>hash</key>
+			<data>
+			kQbDQs6GM/K0zP8XmvWwZpG6vyA=
+			</data>
 			<key>hash2</key>
 			<data>
 			4K1twxHDEfyhA1mEngy6RNbYMf9hAn0c4OMfnBW9d0U=
-			</data>
-		</dict>
-		<key>SVGView_SVGView.bundle/Info.plist</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			g7Fj16wvj6v777TnWgPAqBHv1Rxmox+DBH2m83C2lNw=
 			</data>
 		</dict>
 	</dict>
