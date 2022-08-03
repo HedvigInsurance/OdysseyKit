@@ -18,11 +18,11 @@
 		</data>
 		<key>Modules/SVGView.swiftmodule/arm64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		6ArYHRSPFuOVtu/olGzbEn/q4JM=
+		Vny5OqPy8U4/R+sdfAMos1ZAX8A=
 		</data>
 		<key>Modules/SVGView.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		zpmhIecQQcXESHYhJqnKTv241V4=
+		JlkuHVyOxaBd5HIKYYlZ+RiSuaI=
 		</data>
 		<key>Modules/SVGView.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -30,11 +30,11 @@
 		</data>
 		<key>Modules/SVGView.swiftmodule/x86_64-apple-ios-simulator.swiftinterface</key>
 		<data>
-		bVvWcBEgBwiAcs+90Zv4GlAKiPM=
+		NmQ+Ub2jWKr98JajYeb11KXxCDM=
 		</data>
 		<key>Modules/SVGView.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0u2A8gQaja8wnViNJZKLL4lLbcs=
+		KZvVb7lZ0mYVV4yUXJx+18U7w/Q=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -69,22 +69,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			6ArYHRSPFuOVtu/olGzbEn/q4JM=
+			Vny5OqPy8U4/R+sdfAMos1ZAX8A=
 			</data>
 			<key>hash2</key>
 			<data>
-			1NrUrxXP1yc/tJCAarDFxXjZHmD1Z0hE7vBetDjufgs=
+			yZDZkf4I02dJ0UDzTEM7VMdEk92W0rFLRTnK37uVgQw=
 			</data>
 		</dict>
 		<key>Modules/SVGView.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			zpmhIecQQcXESHYhJqnKTv241V4=
+			JlkuHVyOxaBd5HIKYYlZ+RiSuaI=
 			</data>
 			<key>hash2</key>
 			<data>
-			eGa3AgyiEMDnm81i7VR5C2MDMmnhY5Eu/kH1rNxHsOo=
+			Ha644MlZ0PPISMynHEFFKzlqoRYURg/PAwu86havSIc=
 			</data>
 		</dict>
 		<key>Modules/SVGView.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -102,22 +102,22 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			bVvWcBEgBwiAcs+90Zv4GlAKiPM=
+			NmQ+Ub2jWKr98JajYeb11KXxCDM=
 			</data>
 			<key>hash2</key>
 			<data>
-			O1lJTzP6QK0AY3tJSBBi3TG4sk4wX1Yvf8nSfg68KnI=
+			ANkZ4B09PHeZ2v6GMgDW8rnJxlyIQZwFtkJ4GVE2GeE=
 			</data>
 		</dict>
 		<key>Modules/SVGView.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<dict>
 			<key>hash</key>
 			<data>
-			0u2A8gQaja8wnViNJZKLL4lLbcs=
+			KZvVb7lZ0mYVV4yUXJx+18U7w/Q=
 			</data>
 			<key>hash2</key>
 			<data>
-			VcRkBEepXWaC0YnTA4FdJDO0SVQV0pPFaAmaFpGtdWE=
+			Bw+Ha0crVlewwAP9QjwngEBe9Nc2P4J7b1f29By8A10=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>

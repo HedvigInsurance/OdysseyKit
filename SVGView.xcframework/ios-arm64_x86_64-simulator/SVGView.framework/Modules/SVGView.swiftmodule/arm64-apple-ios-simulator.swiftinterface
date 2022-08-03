@@ -1,6 +1,7 @@
 // swift-interface-format-version: 1.0
 // swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
 // swift-module-flags: -target arm64-apple-ios14.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name SVGView
+import Combine
 import CoreGraphics
 import Foundation
 import Swift
@@ -13,7 +14,7 @@ import _Concurrency
   @objc override dynamic public init()
   @objc deinit
 }
-public class SVGDataImage : SVGView.SVGImage, Foundation.ObservableObject {
+public class SVGDataImage : SVGView.SVGImage, Combine.ObservableObject {
   @Combine.Published @_projectedValueProperty($data) public var data: Foundation.Data {
     get
     set
@@ -39,7 +40,7 @@ public class SVGURLImage : SVGView.SVGImage, Foundation.ObservableObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public class SVGGroup : SVGView.SVGNode, Foundation.ObservableObject {
+public class SVGGroup : SVGView.SVGNode, Combine.ObservableObject {
   @Combine.Published @_projectedValueProperty($contents) public var contents: [SVGView.SVGNode] {
     get
     set
@@ -200,7 +201,7 @@ extension SVGView.SVGNode {
   override public init(transform: CoreGraphics.CGAffineTransform = super, opaque: Swift.Bool = super, opacity: Swift.Double = super, clip: SVGView.SVGNode? = nil, mask: SVGView.SVGNode? = nil, id: Swift.String? = nil)
   @objc deinit
 }
-public class SVGText : SVGView.SVGNode, Foundation.ObservableObject {
+public class SVGText : SVGView.SVGNode, Combine.ObservableObject {
   @Combine.Published @_projectedValueProperty($text) public var text: Swift.String {
     get
     set
@@ -403,7 +404,7 @@ public class SVGStroke {
   public func toSwiftUI() -> SwiftUI.StrokeStyle
   @objc deinit
 }
-public class SVGCircle : SVGView.SVGShape, Foundation.ObservableObject {
+public class SVGCircle : SVGView.SVGShape, Combine.ObservableObject {
   @Combine.Published @_projectedValueProperty($cx) public var cx: CoreGraphics.CGFloat {
     get
     set
@@ -441,7 +442,7 @@ public class SVGCircle : SVGView.SVGShape, Foundation.ObservableObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public class SVGEllipse : SVGView.SVGShape, Foundation.ObservableObject {
+public class SVGEllipse : SVGView.SVGShape, Combine.ObservableObject {
   @Combine.Published @_projectedValueProperty($cx) public var cx: CoreGraphics.CGFloat {
     get
     set
@@ -489,7 +490,7 @@ public class SVGEllipse : SVGView.SVGShape, Foundation.ObservableObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public class SVGLine : SVGView.SVGShape, Foundation.ObservableObject {
+public class SVGLine : SVGView.SVGShape, Combine.ObservableObject {
   @Combine.Published @_projectedValueProperty($x1) public var x1: CoreGraphics.CGFloat {
     get
     set
@@ -538,7 +539,7 @@ public class SVGLine : SVGView.SVGShape, Foundation.ObservableObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public class SVGPath : SVGView.SVGShape, Foundation.ObservableObject {
+public class SVGPath : SVGView.SVGShape, Combine.ObservableObject {
   @Combine.Published @_projectedValueProperty($segments) public var segments: [SVGView.PathSegment] {
     get
     set
@@ -567,7 +568,7 @@ public class SVGPath : SVGView.SVGShape, Foundation.ObservableObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public class SVGPolygon : SVGView.SVGShape, Foundation.ObservableObject {
+public class SVGPolygon : SVGView.SVGShape, Combine.ObservableObject {
   @Combine.Published @_projectedValueProperty($points) public var points: [CoreGraphics.CGPoint] {
     get
     set
@@ -587,7 +588,7 @@ public class SVGPolygon : SVGView.SVGShape, Foundation.ObservableObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public class SVGPolyline : SVGView.SVGShape, Foundation.ObservableObject {
+public class SVGPolyline : SVGView.SVGShape, Combine.ObservableObject {
   @Combine.Published @_projectedValueProperty($points) public var points: [CoreGraphics.CGPoint] {
     get
     set
@@ -607,7 +608,7 @@ public class SVGPolyline : SVGView.SVGShape, Foundation.ObservableObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public class SVGRect : SVGView.SVGShape, Foundation.ObservableObject {
+public class SVGRect : SVGView.SVGShape, Combine.ObservableObject {
   @Combine.Published @_projectedValueProperty($x) public var x: CoreGraphics.CGFloat {
     get
     set
