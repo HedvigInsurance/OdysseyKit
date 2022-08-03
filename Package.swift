@@ -17,32 +17,32 @@ let package = Package(
         .binaryTarget(
             name: "OdysseyKit",
             url: "https", // OdysseyKit URL
-            checksum: "74b98ed08c89ebc6e9e99896b2cad50c3e2b5c5bd4c37651076f2b783e8b8a8f"// OdysseyKit Checksum
+            checksum: "835a66ab3a9e92a299a43e145e0637ef3d5dbbe9255b90ab2c15569eb7768d86"// OdysseyKit Checksum
         ),
         .binaryTarget(
             name: "Odyssey",
             url: "https", // Odyssey URL
-            checksum: "deb942b5fe21059ad020bfd53b6332005e9b326582cbc04701f56171fcb00c3a"// Odyssey Checksum
+            checksum: "02830d5d446052cfefe7acb87c53016afd34eb86e539c8b0ae56d59918cc2e6b"// Odyssey Checksum
         ),
         .binaryTarget(
             name: "KMPNativeCoroutinesCore",
             url: "https", // KMPNativeCoroutinesCore URL
-            checksum: "f6ea519998bb9cb9e5b26a49de1221f48c5fda9e67f790e0a2f929e043c98ce1"// KMPNativeCoroutinesCore Checksum
+            checksum: "9e56efd76f126057accb43743f59239303a9ee4be5d3d8b428074809c4d5aff6"// KMPNativeCoroutinesCore Checksum
         ),
         .binaryTarget(
             name: "KMPNativeCoroutinesAsync",
             url: "https", // KMPNativeCoroutinesAsync URL
-            checksum: "c5b73aee12c4d581167f24988712f3b0d0656c5b2599b60d2a885ef6b017f455"// KMPNativeCoroutinesAsync Checksum
+            checksum: "b3e83de55cd445907aae031f6113c8b3a704e937657d0a62d93fab6581aaf253"// KMPNativeCoroutinesAsync Checksum
         ),
         .binaryTarget(
             name: "SVGView",
             url: "https", // SVGView URL
-            checksum: "5f84880243a561d37d2fb75131de994e83ad37a0dff402d1feac8f7f82224012"// SVGView Checksum
+            checksum: "56926cd4c801be764b6d17ae4e490605dfbdabdfb51a5be48b9c56d26dd17855"// SVGView Checksum
         ),
         .binaryTarget(
             name: "UIPilot",
             url: "https", // UIPilot URL
-            checksum: "21795de019360d9af142e23efb7a9e536ae9f5cee8ad594116381a644ab547ee"// UIPilot Checksum
+            checksum: "472c5dabf24ec8ded56502e424a5cf1cf11b9ccd87c5dd9e3f116c064163f452"// UIPilot Checksum
         ),
         .target(
             name: "OdysseyKitTargets",
