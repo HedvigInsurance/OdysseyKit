@@ -1,0 +1,569 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-ios14.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name OdysseyKit
+import Combine
+import Foundation
+import KMPNativeCoroutinesAsync
+import Odyssey
+import SVGView
+import Swift
+import SwiftUI
+import UIKit.UIFont
+import UIKit
+import UIPilot
+import _Concurrency
+public enum OdysseyKitAsset {
+  public static let checkmark: OdysseyKit.OdysseyKitImages
+  public static let chevronLeft: OdysseyKit.OdysseyKitImages
+  public static let chevronRight: OdysseyKit.OdysseyKitImages
+}
+public struct OdysseyKitImages {
+  public var name: Swift.String {
+    get
+  }
+  public typealias Image = UIKit.UIImage
+  public var image: OdysseyKit.OdysseyKitImages.Image {
+    get
+  }
+}
+extension UIKit.UIImage {
+  @available(macOS, deprecated, message: "This initializer is unsafe on macOS, please use the OdysseyKitImages.image property")
+  convenience public init?(asset: OdysseyKit.OdysseyKitImages)
+}
+@_inheritsConvenienceInitializers @objc public class OdysseyKitResources : ObjectiveC.NSObject {
+  @objc public class var bundle: Foundation.Bundle {
+    @objc get
+  }
+  @objc override dynamic public init()
+  @objc deinit
+}
+public enum OdysseyKitFontFamily {
+  public enum HedvigLetters {
+    public static let small: OdysseyKit.OdysseyKitFontConvertible
+    public static let standard: OdysseyKit.OdysseyKitFontConvertible
+    public static let all: [OdysseyKit.OdysseyKitFontConvertible]
+  }
+  public static let allCustomFonts: [OdysseyKit.OdysseyKitFontConvertible]
+  public static func registerAllCustomFonts()
+}
+public struct OdysseyKitFontConvertible {
+  public let name: Swift.String
+  public let family: Swift.String
+  public let path: Swift.String
+  public typealias Font = UIKit.UIFont
+  public func font(size: CoreGraphics.CGFloat) -> OdysseyKit.OdysseyKitFontConvertible.Font
+  public func register()
+}
+extension UIKit.UIFont {
+  convenience public init?(font: OdysseyKit.OdysseyKitFontConvertible, size: CoreGraphics.CGFloat)
+}
+public struct ActivityIndicator<Color> : SwiftUI.UIViewRepresentable where Color : OdysseyKit.hColor {
+  public init(style: UIKit.UIActivityIndicatorView.Style, color: Color)
+  @_Concurrency.MainActor(unsafe) public func makeUIView(context: OdysseyKit.ActivityIndicator<Color>.Context) -> UIKit.UIActivityIndicatorView
+  @_Concurrency.MainActor(unsafe) public func updateUIView(_ uiView: UIKit.UIActivityIndicatorView, context: OdysseyKit.ActivityIndicator<Color>.Context)
+  public typealias Body = Swift.Never
+  public typealias Coordinator = Swift.Void
+  public typealias UIViewType = UIKit.UIActivityIndicatorView
+}
+extension CoreGraphics.CGFloat {
+  public static var defaultCornerRadius: CoreGraphics.CGFloat
+}
+public struct DefaultStyling {
+  public static func applyCommonNavigationBarStyling(_ appearance: UIKit.UINavigationBarAppearance)
+  public static func scrollEdgeNavigationBarAppearance() -> UIKit.UINavigationBarAppearance
+  public static func standardNavigationBarAppearance() -> UIKit.UINavigationBarAppearance
+  public static func compactNavigationBarAppearance() -> UIKit.UINavigationBarAppearance
+  public static func install()
+}
+public enum Fonts {
+  public static var hedvigLettersStandard: UIKit.UIFont
+  public static var hedvigLettersSmall: UIKit.UIFont
+  public static var forceTraitCollection: UIKit.UITraitCollection?
+  public static func fontFor(style: OdysseyKit.HFontTextStyle) -> UIKit.UIFont
+}
+public enum hButtonFilledStyle {
+  case standard
+  case overImage
+  public static func == (a: OdysseyKit.hButtonFilledStyle, b: OdysseyKit.hButtonFilledStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension SwiftUI.View {
+  public func hButtonFilledStyle(_ style: OdysseyKit.hButtonFilledStyle) -> some SwiftUI.View
+  
+}
+extension SwiftUI.View {
+  public func hButtonIsLoading(_ isLoading: Swift.Bool) -> some SwiftUI.View
+  
+}
+public enum hButton {
+  public struct LargeButtonFilled<Content> : SwiftUI.View where Content : SwiftUI.View {
+    public init(action: @escaping () -> Swift.Void, @SwiftUI.ViewBuilder content: @escaping () -> Content)
+    @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+      get
+    }
+    public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit7hButtonO05LargeC6FilledV4bodyQrvp", 0) __<Content>
+  }
+  public struct SmallButtonFilled<Content> : SwiftUI.View where Content : SwiftUI.View {
+    public init(action: @escaping () -> Swift.Void, @SwiftUI.ViewBuilder content: @escaping () -> Content)
+    @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+      get
+    }
+    public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit7hButtonO05SmallC6FilledV4bodyQrvp", 0) __<Content>
+  }
+  public struct LargeButtonOutlined<Content> : SwiftUI.View where Content : SwiftUI.View {
+    public init(action: @escaping () -> Swift.Void, @SwiftUI.ViewBuilder content: @escaping () -> Content)
+    @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+      get
+    }
+    public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit7hButtonO05LargeC8OutlinedV4bodyQrvp", 0) __<Content>
+  }
+  public struct SmallButtonOutlined<Content> : SwiftUI.View where Content : SwiftUI.View {
+    public init(action: @escaping () -> Swift.Void, @SwiftUI.ViewBuilder content: @escaping () -> Content)
+    @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+      get
+    }
+    public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit7hButtonO05SmallC8OutlinedV4bodyQrvp", 0) __<Content>
+  }
+  public struct SmallButtonText<Content> : SwiftUI.View where Content : SwiftUI.View {
+    public init(action: @escaping () -> Swift.Void, @SwiftUI.ViewBuilder content: @escaping () -> Content)
+    @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+      get
+    }
+    public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit7hButtonO05SmallC4TextV4bodyQrvp", 0) __<Content>
+  }
+  public struct LargeButtonText<Content> : SwiftUI.View where Content : SwiftUI.View {
+    public init(action: @escaping () -> Swift.Void, @SwiftUI.ViewBuilder content: @escaping () -> Content)
+    @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+      get
+    }
+    public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit7hButtonO05LargeC4TextV4bodyQrvp", 0) __<Content>
+  }
+}
+public protocol hColor : SwiftUI.View {
+  associatedtype Inverted : OdysseyKit.hColor
+  associatedtype OpacityModified : OdysseyKit.hColor
+  func colorFor(_ scheme: SwiftUI.ColorScheme, _ level: UIKit.UIUserInterfaceLevel) -> OdysseyKit.hColorBase
+  func opacity(_ opacity: Swift.Double) -> Self.OpacityModified
+  var inverted: Self.Inverted { get }
+}
+public struct ShapeEnvironmentRedraw<Content> : SwiftUI.View where Content : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit22ShapeEnvironmentRedrawV4bodyQrvp", 0) __<Content>
+}
+extension SwiftUI.Shape {
+  public func fill<S>(_ content: S, style: SwiftUI.FillStyle = FillStyle()) -> some SwiftUI.View where S : OdysseyKit.hColor
+  
+  public func stroke<S>(_ content: S, lineWidth: CoreGraphics.CGFloat = 1) -> some SwiftUI.View where S : OdysseyKit.hColor
+  
+}
+extension SwiftUI.InsettableShape {
+  public func strokeBorder<S>(_ content: S, lineWidth: CoreGraphics.CGFloat = 1) -> some SwiftUI.View where S : OdysseyKit.hColor
+  
+}
+public struct hColorScheme<LightInnerHColor, DarkInnerHColor> : OdysseyKit.hColor where LightInnerHColor : OdysseyKit.hColor, DarkInnerHColor : OdysseyKit.hColor {
+  public init(light: SwiftUI.Color, dark: SwiftUI.Color) where LightInnerHColor == OdysseyKit.hColorBase, DarkInnerHColor == OdysseyKit.hColorBase
+  public init(light: LightInnerHColor, dark: DarkInnerHColor)
+  public init(_ always: SwiftUI.Color) where LightInnerHColor == OdysseyKit.hColorBase, DarkInnerHColor == OdysseyKit.hColorBase
+  public func colorFor(_ scheme: SwiftUI.ColorScheme, _ level: UIKit.UIUserInterfaceLevel) -> OdysseyKit.hColorBase
+  public func opacity(_ opacity: Swift.Double) -> some OdysseyKit.hColor
+  
+  public var inverted: OdysseyKit.hColorScheme<DarkInnerHColor, LightInnerHColor> {
+    get
+  }
+  public var color: OdysseyKit.hColorBase {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit12hColorSchemeV4bodyQrvp", 0) __<LightInnerHColor, DarkInnerHColor>
+  public typealias Inverted = OdysseyKit.hColorScheme<DarkInnerHColor, LightInnerHColor>
+  public typealias OpacityModified = @_opaqueReturnTypeOf("$s10OdysseyKit12hColorSchemeV7opacityyQrSdF", 0) __<LightInnerHColor, DarkInnerHColor>
+}
+extension SwiftUI.View {
+  public func foregroundColor<Color>(_ color: Color?) -> some SwiftUI.View where Color : OdysseyKit.hColor
+  
+  public func border<Color>(_ color: Color?, width: CoreGraphics.CGFloat = 0) -> some SwiftUI.View where Color : OdysseyKit.hColor
+  
+}
+extension SwiftUI.View {
+  public func tint<Color>(_ color: Color?) -> some SwiftUI.View where Color : OdysseyKit.hColor
+  
+}
+public struct hColorLevel<InnerHColor> : OdysseyKit.hColor where InnerHColor : OdysseyKit.hColor {
+  public func colorFor(_ scheme: SwiftUI.ColorScheme, _ level: UIKit.UIUserInterfaceLevel) -> OdysseyKit.hColorBase
+  public func opacity(_ opacity: Swift.Double) -> some OdysseyKit.hColor
+  
+  public var inverted: OdysseyKit.hColorLevel<InnerHColor> {
+    get
+  }
+  public var color: OdysseyKit.hColorBase {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit11hColorLevelV4bodyQrvp", 0) __<InnerHColor>
+  public typealias Inverted = OdysseyKit.hColorLevel<InnerHColor>
+  public typealias OpacityModified = @_opaqueReturnTypeOf("$s10OdysseyKit11hColorLevelV7opacityyQrSdF", 0) __<InnerHColor>
+}
+public struct hColorBase : OdysseyKit.hColor, SwiftUI.View {
+  public init(_ color: SwiftUI.Color)
+  public func colorFor(_ scheme: SwiftUI.ColorScheme, _ level: UIKit.UIUserInterfaceLevel) -> OdysseyKit.hColorBase
+  public func opacity(_ opacity: Swift.Double) -> some OdysseyKit.hColor
+  
+  public var inverted: OdysseyKit.hColorBase {
+    get
+  }
+  public var color: SwiftUI.Color
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit10hColorBaseV4bodyQrvp", 0) __
+  public typealias Inverted = OdysseyKit.hColorBase
+  public typealias OpacityModified = @_opaqueReturnTypeOf("$s10OdysseyKit10hColorBaseV7opacityyQrSdF", 0) __
+}
+public struct hBackgroundColor {
+  public static var primary: some OdysseyKit.hColor {
+    get
+  }
+  public static var secondary: some OdysseyKit.hColor {
+    get
+  }
+  public static var tertiary: some OdysseyKit.hColor {
+    get
+  }
+}
+public struct hGrayscaleColor {
+  public static var one: some OdysseyKit.hColor {
+    get
+  }
+  public static var two: some OdysseyKit.hColor {
+    get
+  }
+  public static var three: some OdysseyKit.hColor {
+    get
+  }
+  public static var four: some OdysseyKit.hColor {
+    get
+  }
+  public static var five: some OdysseyKit.hColor {
+    get
+  }
+}
+public struct hOverlayColor {
+  public static var pressed: some OdysseyKit.hColor {
+    get
+  }
+  public static var pressedLavender: some OdysseyKit.hColor {
+    get
+  }
+}
+public struct hLabelColor {
+  public static var primary: some OdysseyKit.hColor {
+    get
+  }
+  public static var secondary: some OdysseyKit.hColor {
+    get
+  }
+  public static var tertiary: some OdysseyKit.hColor {
+    get
+  }
+  public static var quarternary: some OdysseyKit.hColor {
+    get
+  }
+  public static var link: some OdysseyKit.hColor {
+    get
+  }
+}
+public struct hTintColor {
+  public static var lavenderOne: some OdysseyKit.hColor {
+    get
+  }
+  public static var lavenderTwo: some OdysseyKit.hColor {
+    get
+  }
+  public static var yellowOne: some OdysseyKit.hColor {
+    get
+  }
+  public static var yellowTwo: some OdysseyKit.hColor {
+    get
+  }
+  public static var red: some OdysseyKit.hColor {
+    get
+  }
+  public static var orangeOne: some OdysseyKit.hColor {
+    get
+  }
+  public static var orangeTwo: some OdysseyKit.hColor {
+    get
+  }
+  public static var clear: some OdysseyKit.hColor {
+    get
+  }
+}
+public struct hSeparatorColor {
+  public static var separator: some OdysseyKit.hColor {
+    get
+  }
+}
+public struct EitherHColor<Left, Right> : OdysseyKit.hColor where Left : OdysseyKit.hColor, Right : OdysseyKit.hColor {
+  public var inverted: some OdysseyKit.hColor {
+    get
+  }
+  public func opacity(_ opacity: Swift.Double) -> some OdysseyKit.hColor
+  
+  public func colorFor(_ scheme: SwiftUI.ColorScheme, _ level: UIKit.UIUserInterfaceLevel) -> OdysseyKit.hColorBase
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit12EitherHColorV4bodyQrvp", 0) __<Left, Right>
+  public typealias Inverted = @_opaqueReturnTypeOf("$s10OdysseyKit12EitherHColorV8invertedQrvp", 0) __<Left, Right>
+  public typealias OpacityModified = @_opaqueReturnTypeOf("$s10OdysseyKit12EitherHColorV7opacityyQrSdF", 0) __<Left, Right>
+}
+@_functionBuilder public struct hColorBuilder {
+  public static func buildBlock<Color>(_ color: Color) -> some OdysseyKit.hColor where Color : OdysseyKit.hColor
+  
+  public static func buildEither<Left, Right>(first color: Left) -> OdysseyKit.EitherHColor<Left, Right> where Left : OdysseyKit.hColor, Right : OdysseyKit.hColor
+  public static func buildEither<Left, Right>(second color: Right) -> OdysseyKit.EitherHColor<Left, Right> where Left : OdysseyKit.hColor, Right : OdysseyKit.hColor
+}
+extension SwiftUI.EnvironmentValues {
+  public var hFormBottomAttachedView: SwiftUI.AnyView? {
+    get
+    set
+  }
+}
+extension SwiftUI.View {
+  public func hFormAttachToBottom<Content>(@SwiftUI.ViewBuilder _ content: () -> Content) -> some SwiftUI.View where Content : SwiftUI.View
+  
+}
+public struct hForm<Content> : SwiftUI.View where Content : SwiftUI.View {
+  public init(@SwiftUI.ViewBuilder _ builder: () -> Content)
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit5hFormV4bodyQrvp", 0) __<Content>
+}
+public struct hRow<Content, Accessory> : SwiftUI.View where Content : SwiftUI.View, Accessory : SwiftUI.View {
+  public init(_ accessory: Accessory, @SwiftUI.ViewBuilder _ builder: () -> Content)
+  public func noSpacing() -> OdysseyKit.hRow<Content, Accessory>
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit4hRowV4bodyQrvp", 0) __<Content, Accessory>
+}
+extension OdysseyKit.hRow where Accessory == SwiftUI.EmptyView {
+  public init(@SwiftUI.ViewBuilder _ builder: () -> Content)
+}
+public struct StandaloneChevronAccessory : SwiftUI.View {
+  public init()
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit26StandaloneChevronAccessoryV4bodyQrvp", 0) __
+}
+public struct ChevronAccessory : SwiftUI.View {
+  public init()
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit16ChevronAccessoryV4bodyQrvp", 0) __
+}
+public struct EmptyAccessory : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit14EmptyAccessoryV4bodyQrvp", 0) __
+}
+public struct SelectedAccessory : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit17SelectedAccessoryV4bodyQrvp", 0) __
+}
+extension OdysseyKit.hRow {
+  public var withChevronAccessory: OdysseyKit.hRow<Content, OdysseyKit.ChevronAccessory> {
+    get
+  }
+  public func withSelectedAccessory(_ selected: Swift.Bool) -> OdysseyKit.hRow<Content, OdysseyKit.SelectedAccessory>
+  public func withCustomAccessory<AccessoryContent>(@SwiftUI.ViewBuilder _ builder: () -> AccessoryContent) -> OdysseyKit.hRow<Content, AccessoryContent> where AccessoryContent : SwiftUI.View
+  public var withEmptyAccessory: OdysseyKit.hRow<Content, OdysseyKit.EmptyAccessory> {
+    get
+  }
+}
+extension OdysseyKit.hRow {
+  public func onTap(_ onTap: @escaping () -> Swift.Void) -> some SwiftUI.View where Accessory == SwiftUI.EmptyView
+  
+  public func onTap(_ onTap: @escaping () -> Swift.Void) -> some SwiftUI.View
+  
+  public func onTap(if: Swift.Bool, _ onTap: @escaping () -> Swift.Void) -> some SwiftUI.View
+  
+}
+public struct hRowDivider : SwiftUI.View {
+  public init()
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit11hRowDividerV4bodyQrvp", 0) __
+}
+extension SwiftUI.View {
+  public func dividerInsets(_ insets: SwiftUI.EdgeInsets) -> some SwiftUI.View
+  
+  public func dividerInsets(_ edges: SwiftUI.Edge.Set = .all, _ length: CoreGraphics.CGFloat) -> some SwiftUI.View
+  
+}
+extension SwiftUI.View {
+  public func hShadow() -> some SwiftUI.View
+  
+}
+public enum hSectionContainerStyle {
+  case transparent
+  case opaque
+  public static func == (a: OdysseyKit.hSectionContainerStyle, b: OdysseyKit.hSectionContainerStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+extension OdysseyKit.hSectionContainerStyle : SwiftUI.ViewModifier {
+  @_Concurrency.MainActor(unsafe) public func body(content: OdysseyKit.hSectionContainerStyle.Content) -> some SwiftUI.View
+  
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit22hSectionContainerStyleO4body7contentQr7SwiftUI21_ViewModifier_ContentVyACG_tF", 0) __
+}
+extension SwiftUI.View {
+  public func sectionContainerStyle(_ style: OdysseyKit.hSectionContainerStyle) -> some SwiftUI.View
+  
+}
+public struct hSection<Header, Content, Footer> : SwiftUI.View where Header : SwiftUI.View, Content : SwiftUI.View, Footer : SwiftUI.View {
+  public init(header: Header? = nil, footer: Footer? = nil, @SwiftUI.ViewBuilder _ builder: @escaping () -> Content)
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public var withoutBottomPadding: some SwiftUI.View {
+    get
+  }
+  public func withHeader<Header>(@SwiftUI.ViewBuilder _ builder: @escaping () -> Header) -> OdysseyKit.hSection<Header, Content, Footer> where Header : SwiftUI.View
+  public func withFooter<Footer>(@SwiftUI.ViewBuilder _ builder: @escaping () -> Footer) -> OdysseyKit.hSection<Header, Content, Footer> where Footer : SwiftUI.View
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit8hSectionV4bodyQrvp", 0) __<Header, Content, Footer>
+}
+extension OdysseyKit.hSection where Header == SwiftUI.EmptyView {
+  public init(footer: Footer? = nil, @SwiftUI.ViewBuilder _ builder: @escaping () -> Content)
+}
+extension OdysseyKit.hSection where Footer == SwiftUI.EmptyView {
+  public init(header: Header? = nil, @SwiftUI.ViewBuilder _ builder: @escaping () -> Content)
+}
+extension OdysseyKit.hSection where Header == SwiftUI.EmptyView, Footer == SwiftUI.EmptyView {
+  public init(@SwiftUI.ViewBuilder _ builder: @escaping () -> Content)
+}
+extension SwiftUI.EnvironmentValues {
+  public var defaultHTextStyle: OdysseyKit.HFontTextStyle? {
+    get
+    set
+  }
+}
+extension SwiftUI.View {
+  public func hTextStyle(_ style: OdysseyKit.HFontTextStyle? = nil) -> some SwiftUI.View
+  
+}
+public enum HFontTextStyle {
+  case prominentTitle
+  case largeTitle
+  case title1
+  case title2
+  case title3
+  case headline
+  case subheadline
+  case body
+  case callout
+  case footnote
+  case caption1
+  case caption2
+  public static func == (a: OdysseyKit.HFontTextStyle, b: OdysseyKit.HFontTextStyle) -> Swift.Bool
+  public func hash(into hasher: inout Swift.Hasher)
+  public var hashValue: Swift.Int {
+    get
+  }
+}
+public struct hText : SwiftUI.View {
+  public var text: Swift.String
+  public var style: OdysseyKit.HFontTextStyle?
+  public init(_ text: Swift.String, style: OdysseyKit.HFontTextStyle)
+  public init(_ text: Swift.String)
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit5hTextV4bodyQrvp", 0) __
+}
+@_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class HostingView<Content> : UIKit.UIView where Content : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) public var swiftUIRootView: Content {
+    get
+    set
+  }
+  @_Concurrency.MainActor(unsafe) required public init(rootView: Content)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func willMove(toSuperview newSuperview: UIKit.UIView?)
+  @objc deinit
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func systemLayoutSizeFitting(_ targetSize: CoreGraphics.CGSize) -> CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public var intrinsicContentSize: CoreGraphics.CGSize {
+    @_Concurrency.MainActor(unsafe) @objc get
+  }
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func systemLayoutSizeFitting(_ targetSize: CoreGraphics.CGSize, withHorizontalFittingPriority horizontalFittingPriority: UIKit.UILayoutPriority, verticalFittingPriority: UIKit.UILayoutPriority) -> CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeThatFits(_ size: CoreGraphics.CGSize) -> CoreGraphics.CGSize
+  @_Concurrency.MainActor(unsafe) @objc override dynamic open func sizeToFit()
+}
+@_hasMissingDesignatedInitializers @_Concurrency.MainActor(unsafe) public class AdjustableHostingController<Content> : SwiftUI.UIHostingController<Content> where Content : SwiftUI.View {
+  @_Concurrency.MainActor(unsafe) override public init(rootView: Content)
+  @_Concurrency.MainActor(unsafe) @objc override dynamic public func viewWillLayoutSubviews()
+  @objc deinit
+}
+extension SwiftUI.View {
+  public func introspectScrollView(_ foundScrollView: @escaping (_ scrollView: UIKit.UIScrollView) -> Swift.Void) -> some SwiftUI.View
+  
+  public func introspectTextField(_ foundTextField: @escaping (_ textField: UIKit.UITextField) -> Swift.Void) -> some SwiftUI.View
+  
+}
+public struct ForceScrollViewIndicatorInset : SwiftUI.ViewModifier {
+  public init(insetBottom: CoreGraphics.CGFloat)
+  @_Concurrency.MainActor(unsafe) public func body(content: OdysseyKit.ForceScrollViewIndicatorInset.Content) -> some SwiftUI.View
+  
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit29ForceScrollViewIndicatorInsetV4body7contentQr7SwiftUI01_E16Modifier_ContentVyACG_tF", 0) __
+}
+public struct ContentOffsetModifier<Modifier> : SwiftUI.ViewModifier where Modifier : SwiftUI.ViewModifier {
+  public init(modifier: @escaping (UIKit.UIScrollView, CoreGraphics.CGPoint) -> Modifier)
+  @_Concurrency.MainActor(unsafe) public func body(content: OdysseyKit.ContentOffsetModifier<Modifier>.Content) -> some SwiftUI.View
+  
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit21ContentOffsetModifierV4body7contentQr7SwiftUI05_Viewe1_C0VyACyxGG_tF", 0) __<Modifier>
+}
+extension UIKit.UIView {
+  @_Concurrency.MainActor(unsafe) public var viewController: UIKit.UIViewController? {
+    get
+  }
+}
+public func initializeKoin()
+public struct TransferEnvironment : SwiftUI.ViewModifier {
+  public init(environment: SwiftUI.EnvironmentValues)
+  @_Concurrency.MainActor(unsafe) public func body(content: OdysseyKit.TransferEnvironment.Content) -> some SwiftUI.View
+  
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit19TransferEnvironmentV4body7contentQr7SwiftUI21_ViewModifier_ContentVyACG_tF", 0) __
+}
+@_Concurrency.MainActor(unsafe) public struct RootView : SwiftUI.View, Swift.Identifiable {
+  @_Concurrency.MainActor(unsafe) public var id: Swift.String {
+    get
+  }
+  @_Concurrency.MainActor(unsafe) public init(name: Swift.String, initialURL: Swift.String = "/")
+  @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
+    get
+  }
+  public typealias Body = @_opaqueReturnTypeOf("$s10OdysseyKit8RootViewV4bodyQrvp", 0) __
+  public typealias ID = Swift.String
+}
+extension OdysseyKit.hButtonFilledStyle : Swift.Equatable {}
+extension OdysseyKit.hButtonFilledStyle : Swift.Hashable {}
+extension OdysseyKit.hSectionContainerStyle : Swift.Equatable {}
+extension OdysseyKit.hSectionContainerStyle : Swift.Hashable {}
+extension OdysseyKit.HFontTextStyle : Swift.Equatable {}
+extension OdysseyKit.HFontTextStyle : Swift.Hashable {}
