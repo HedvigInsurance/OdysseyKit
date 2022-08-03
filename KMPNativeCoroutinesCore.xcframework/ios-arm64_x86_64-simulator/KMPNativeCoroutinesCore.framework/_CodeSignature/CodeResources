@@ -10,7 +10,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		8NqhqKp5ylEXMZGaclqW9df5ywo=
+		Q+UoJUpjnvcuLrFUNiyLEydg6C8=
 		</data>
 		<key>Modules/KMPNativeCoroutinesCore.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/KMPNativeCoroutinesCore.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		0+aR9ReYKAQryy05O9i/24RuAok=
+		hVStPuC0bfTAyIUXy469SQiRZp0=
 		</data>
 		<key>Modules/KMPNativeCoroutinesCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/KMPNativeCoroutinesCore.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		AzIxmLXZBQem43H9phLThjY0Q8o=
+		C/FtNWnBd0E4sX5qR4gv/BwjJMQ=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -80,11 +80,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			0+aR9ReYKAQryy05O9i/24RuAok=
+			hVStPuC0bfTAyIUXy469SQiRZp0=
 			</data>
 			<key>hash2</key>
 			<data>
-			tFbKrsNGPAvGUWqv+KzGXbKwx3gPZkZLozJM+qGszTE=
+			FikDdJX5o9lSHljqShk/mT78U6m9gRohq7/3UiKZe1I=
 			</data>
 		</dict>
 		<key>Modules/KMPNativeCoroutinesCore.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -113,11 +113,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			AzIxmLXZBQem43H9phLThjY0Q8o=
+			C/FtNWnBd0E4sX5qR4gv/BwjJMQ=
 			</data>
 			<key>hash2</key>
 			<data>
-			sqOPj+CHcC3O7nIr7snbkCPvXsf8bWCVv8gbTxQInVc=
+			iQ2KWXhujhWf8OaV2fX03bWZFNQOLi63zDnI4/Wb57c=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
