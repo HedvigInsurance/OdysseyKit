@@ -9,7 +9,7 @@ let package = Package(
     products: [
         .library(
             name: "OdysseyKit",
-            targets: ["OdysseyKit"]
+            targets: ["OdysseyKitTargets"]
         )
     ],
     dependencies: [],
@@ -18,5 +18,32 @@ let package = Package(
             name: "OdysseyKit",
             path: "OdysseyKit.xcframework"
         ),
+        .binaryTarget(
+            name: "KMPNativeCoroutinesCore",
+            path: "KMPNativeCoroutinesCore.xcframework"
+        ),
+        .binaryTarget(
+            name: "KMPNativeCoroutinesAsync",
+            path: "KMPNativeCoroutinesAsync.xcframework"
+        ),
+        .binaryTarget(
+            name: "SVGView",
+            path: "SVGView.xcframework"
+        ),
+        .binaryTarget(
+            name: "UIPilot",
+            path: "UIPilot.xcframework"
+        ),
+        .target(
+            name: "OdysseyKitTargets",
+            dependencies: [
+               .target(name: "OdysseyKit"),
+               .target(name: "KMPNativeCoroutinesCore"),
+               .target(name: "KMPNativeCoroutinesAsync"),
+               .target(name: "SVGView"),
+               .target(name: "UIPilot")
+            ],
+            path: "OdysseyKitTargets"
+        )
     ]
 )
