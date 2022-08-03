@@ -17,7 +17,7 @@ let package = Package(
         .binaryTarget(
             name: "OdysseyKit",
             url: "https", // OdysseyKit URL
-            checksum: "3587562b46c4897c3f132bfa659e8acc626d04c8524acf4bf85ff34677790489"// OdysseyKit Checksum
+            checksum: "0259ee51be325ef0cb260f4f74edcaf14cd0f9e1f16bef5e80bc473b018191d9"// OdysseyKit Checksum
         ),
         .binaryTarget(
             name: "Odyssey",
@@ -27,22 +27,22 @@ let package = Package(
         .binaryTarget(
             name: "KMPNativeCoroutinesCore",
             url: "https", // KMPNativeCoroutinesCore URL
-            checksum: "d8c327a63284fa80729d6261970da0451335920c07cf2c8a7ce8c7ec9d57b147"// KMPNativeCoroutinesCore Checksum
+            checksum: "c85cd24ae218337f92d38075953f3f44c23f53dbbbd692b47652e99e20bb8a83"// KMPNativeCoroutinesCore Checksum
         ),
         .binaryTarget(
             name: "KMPNativeCoroutinesAsync",
             url: "https", // KMPNativeCoroutinesAsync URL
-            checksum: "80ce65ae407c6e9bce78ff9963b9d6a6668acb331bf2b384ca5cd0a74c06bebf"// KMPNativeCoroutinesAsync Checksum
+            checksum: "afb1ba52239d7823317957db08ae2a56611d040f22a5179171b2d0e6ceaaa074"// KMPNativeCoroutinesAsync Checksum
         ),
         .binaryTarget(
             name: "SVGView",
             url: "https", // SVGView URL
-            checksum: "6f383fc208b819d74efba320b4475bda21ac804125a174929a96539ab2c5336e"// SVGView Checksum
+            checksum: "71e19b3d1b46cf72a1111a546e92055442fd21524313d29c23c7c758a220d00a"// SVGView Checksum
         ),
         .binaryTarget(
             name: "UIPilot",
             url: "https", // UIPilot URL
-            checksum: "166268a668b144f586a1c8a8df3ac9b4b8840c1858585945d0152d6bc2519c75"// UIPilot Checksum
+            checksum: "97eaee1acc4ca5387381cfcaa9564c02d8a428a2e30508b5f8fc2d2a79d02f4d"// UIPilot Checksum
         ),
         .target(
             name: "OdysseyKitTargets",
