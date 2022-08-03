@@ -22,7 +22,7 @@ let package = Package(
         .binaryTarget(
             name: "Odyssey",
             url: "https", // Odyssey URL
-            checksum: "deb942b5fe21059ad020bfd53b6332005e9b326582cbc04701f56171fcb00c3a"
+            checksum: "" // Odyssey Checksum
         ),
         .binaryTarget(
             name: "KMPNativeCoroutinesCore",
