@@ -1,0 +1,4 @@
+framework module OdysseyKit {
+  header "OdysseyKit-Swift.h"
+  requires objc
+}
