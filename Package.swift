@@ -42,11 +42,11 @@ let package = Package(
             name: "OdysseyKitTargets",
             dependencies: [
                .target(name: "OdysseyKit"),
+               .target(name: "Odyssey"),
                .target(name: "KMPNativeCoroutinesCore"),
                .target(name: "KMPNativeCoroutinesAsync"),
                .target(name: "SVGView"),
                .target(name: "UIPilot"),
-               .target(name: "Odyssey")
             ],
             path: "OdysseyKitTargets"
         )
