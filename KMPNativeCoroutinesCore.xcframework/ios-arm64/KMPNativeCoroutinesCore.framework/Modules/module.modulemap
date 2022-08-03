@@ -1,0 +1,4 @@
+framework module KMPNativeCoroutinesCore {
+  header "KMPNativeCoroutinesCore-Swift.h"
+  requires objc
+}
