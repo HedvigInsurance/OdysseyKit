@@ -19,7 +19,7 @@ public class UIPilot<T> : Combine.ObservableObject where T : Swift.Equatable {
 }
 public typealias RouteMap<T> = (T) -> SwiftUI.AnyView
 @_Concurrency.MainActor(unsafe) public struct UIPilotHost<T> : SwiftUI.View where T : Swift.Equatable {
-  @_Concurrency.MainActor(unsafe) public init(_ pilot: UIPilot.UIPilot<T>, _ routeMap: @escaping UIPilot.RouteMap<T>)
+  @_Concurrency.MainActor(unsafe) public init(_ pilot: UIPilot<T>, _ routeMap: @escaping RouteMap<T>)
   @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
     get
   }

@@ -14,7 +14,7 @@ import _Concurrency
   @objc override dynamic public init()
   @objc deinit
 }
-public class SVGDataImage : SVGView.SVGImage, Combine.ObservableObject {
+public class SVGDataImage : SVGImage, Combine.ObservableObject {
   @Combine.Published @_projectedValueProperty($data) public var data: Foundation.Data {
     get
     set
@@ -31,7 +31,7 @@ public class SVGDataImage : SVGView.SVGImage, Combine.ObservableObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public class SVGURLImage : SVGView.SVGImage, Foundation.ObservableObject {
+public class SVGURLImage : SVGImage, Foundation.ObservableObject {
   final public let src: Swift.String
   final public let data: Foundation.Data?
   public init(x: CoreGraphics.CGFloat = 0, y: CoreGraphics.CGFloat = 0, width: CoreGraphics.CGFloat = 0, height: CoreGraphics.CGFloat = 0, src: Swift.String, data: Foundation.Data?)
@@ -40,26 +40,26 @@ public class SVGURLImage : SVGView.SVGImage, Foundation.ObservableObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public class SVGGroup : SVGView.SVGNode, Combine.ObservableObject {
-  @Combine.Published @_projectedValueProperty($contents) public var contents: [SVGView.SVGNode] {
+public class SVGGroup : SVGNode, Combine.ObservableObject {
+  @Combine.Published @_projectedValueProperty($contents) public var contents: [SVGNode] {
     get
     set
     _modify
   }
-  public var $contents: Combine.Published<[SVGView.SVGNode]>.Publisher {
+  public var $contents: Combine.Published<[SVGNode]>.Publisher {
     get
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
-  public init(contents: [SVGView.SVGNode], transform: CoreGraphics.CGAffineTransform = .identity, opaque: Swift.Bool = true, opacity: Swift.Double = 1, clip: SVGView.SVGUserSpaceNode? = nil, mask: SVGView.SVGNode? = nil)
+  public init(contents: [SVGNode], transform: CoreGraphics.CGAffineTransform = .identity, opaque: Swift.Bool = true, opacity: Swift.Double = 1, clip: SVGUserSpaceNode? = nil, mask: SVGNode? = nil)
   override public func bounds() -> CoreGraphics.CGRect
-  override public func getNode(byId id: Swift.String) -> SVGView.SVGNode?
+  override public func getNode(byId id: Swift.String) -> SVGNode?
   public func contentView() -> some SwiftUI.View
   
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public class SVGImage : SVGView.SVGNode {
+public class SVGImage : SVGNode {
   @Combine.Published @_projectedValueProperty($x) public var x: CoreGraphics.CGFloat {
     get
     set
@@ -134,22 +134,22 @@ public class SVGNode {
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
-  @Combine.Published @_projectedValueProperty($clip) public var clip: SVGView.SVGNode? {
+  @Combine.Published @_projectedValueProperty($clip) public var clip: SVGNode? {
     get
     set
     _modify
   }
-  public var $clip: Combine.Published<SVGView.SVGNode?>.Publisher {
+  public var $clip: Combine.Published<SVGNode?>.Publisher {
     get
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
-  @Combine.Published @_projectedValueProperty($mask) public var mask: SVGView.SVGNode? {
+  @Combine.Published @_projectedValueProperty($mask) public var mask: SVGNode? {
     get
     set
     _modify
   }
-  public var $mask: Combine.Published<SVGView.SVGNode?>.Publisher {
+  public var $mask: Combine.Published<SVGNode?>.Publisher {
     get
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
@@ -164,44 +164,44 @@ public class SVGNode {
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
-  public init(transform: CoreGraphics.CGAffineTransform = .identity, opaque: Swift.Bool = true, opacity: Swift.Double = 1, clip: SVGView.SVGNode? = nil, mask: SVGView.SVGNode? = nil, id: Swift.String? = nil)
+  public init(transform: CoreGraphics.CGAffineTransform = .identity, opaque: Swift.Bool = true, opacity: Swift.Double = 1, clip: SVGNode? = nil, mask: SVGNode? = nil, id: Swift.String? = nil)
   public func bounds() -> CoreGraphics.CGRect
   public func frame() -> CoreGraphics.CGRect
-  public func getNode(byId id: Swift.String) -> SVGView.SVGNode?
+  public func getNode(byId id: Swift.String) -> SVGNode?
   public func onTapGesture(_ count: Swift.Int = 1, tapClosure: @escaping () -> ())
   public func addGesture<T>(_ newGesture: T) where T : SwiftUI.Gesture
   public func removeAllGestures()
   @objc deinit
 }
-extension SVGView.SVGNode {
+extension SVGNode {
   public func toSwiftUI() -> some SwiftUI.View
   
 }
-@_inheritsConvenienceInitializers public class SVGShape : SVGView.SVGNode {
-  @Combine.Published @_projectedValueProperty($fill) public var fill: SVGView.SVGPaint? {
+@_inheritsConvenienceInitializers public class SVGShape : SVGNode {
+  @Combine.Published @_projectedValueProperty($fill) public var fill: SVGPaint? {
     get
     set
     _modify
   }
-  public var $fill: Combine.Published<SVGView.SVGPaint?>.Publisher {
+  public var $fill: Combine.Published<SVGPaint?>.Publisher {
     get
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
-  @Combine.Published @_projectedValueProperty($stroke) public var stroke: SVGView.SVGStroke? {
+  @Combine.Published @_projectedValueProperty($stroke) public var stroke: SVGStroke? {
     get
     set
     _modify
   }
-  public var $stroke: Combine.Published<SVGView.SVGStroke?>.Publisher {
+  public var $stroke: Combine.Published<SVGStroke?>.Publisher {
     get
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
-  override public init(transform: CoreGraphics.CGAffineTransform = super, opaque: Swift.Bool = super, opacity: Swift.Double = super, clip: SVGView.SVGNode? = nil, mask: SVGView.SVGNode? = nil, id: Swift.String? = nil)
+  override public init(transform: CoreGraphics.CGAffineTransform = super, opaque: Swift.Bool = super, opacity: Swift.Double = super, clip: SVGNode? = nil, mask: SVGNode? = nil, id: Swift.String? = nil)
   @objc deinit
 }
-public class SVGText : SVGView.SVGNode, Combine.ObservableObject {
+public class SVGText : SVGNode, Combine.ObservableObject {
   @Combine.Published @_projectedValueProperty($text) public var text: Swift.String {
     get
     set
@@ -212,32 +212,32 @@ public class SVGText : SVGView.SVGNode, Combine.ObservableObject {
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
-  @Combine.Published @_projectedValueProperty($font) public var font: SVGView.SVGFont? {
+  @Combine.Published @_projectedValueProperty($font) public var font: SVGFont? {
     get
     set
     _modify
   }
-  public var $font: Combine.Published<SVGView.SVGFont?>.Publisher {
+  public var $font: Combine.Published<SVGFont?>.Publisher {
     get
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
-  @Combine.Published @_projectedValueProperty($fill) public var fill: SVGView.SVGPaint? {
+  @Combine.Published @_projectedValueProperty($fill) public var fill: SVGPaint? {
     get
     set
     _modify
   }
-  public var $fill: Combine.Published<SVGView.SVGPaint?>.Publisher {
+  public var $fill: Combine.Published<SVGPaint?>.Publisher {
     get
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
-  @Combine.Published @_projectedValueProperty($stroke) public var stroke: SVGView.SVGStroke? {
+  @Combine.Published @_projectedValueProperty($stroke) public var stroke: SVGStroke? {
     get
     set
     _modify
   }
-  public var $stroke: Combine.Published<SVGView.SVGStroke?>.Publisher {
+  public var $stroke: Combine.Published<SVGStroke?>.Publisher {
     get
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
@@ -252,37 +252,37 @@ public class SVGText : SVGView.SVGNode, Combine.ObservableObject {
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
-  public init(text: Swift.String, font: SVGView.SVGFont? = nil, fill: SVGView.SVGPaint? = SVGColor.black, stroke: SVGView.SVGStroke? = nil, textAnchor: SwiftUI.HorizontalAlignment = .leading, transform: CoreGraphics.CGAffineTransform = .identity, opaque: Swift.Bool = true, opacity: Swift.Double = 1, clip: SVGView.SVGUserSpaceNode? = nil, mask: SVGView.SVGNode? = nil)
+  public init(text: Swift.String, font: SVGFont? = nil, fill: SVGPaint? = SVGColor.black, stroke: SVGStroke? = nil, textAnchor: SwiftUI.HorizontalAlignment = .leading, transform: CoreGraphics.CGAffineTransform = .identity, opaque: Swift.Bool = true, opacity: Swift.Double = 1, clip: SVGUserSpaceNode? = nil, mask: SVGNode? = nil)
   public func contentView() -> some SwiftUI.View
   
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public class SVGUserSpaceNode : SVGView.SVGNode {
+public class SVGUserSpaceNode : SVGNode {
   public enum UserSpace : Swift.String {
     case objectBoundingBox
     case userSpaceOnUse
     public init?(rawValue: Swift.String)
-    public typealias AllCases = [SVGView.SVGUserSpaceNode.UserSpace]
+    public typealias AllCases = [SVGUserSpaceNode.UserSpace]
     public typealias RawValue = Swift.String
-    public static var allCases: [SVGView.SVGUserSpaceNode.UserSpace] {
+    public static var allCases: [SVGUserSpaceNode.UserSpace] {
       get
     }
     public var rawValue: Swift.String {
       get
     }
   }
-  final public let node: SVGView.SVGNode
-  final public let userSpace: SVGView.SVGUserSpaceNode.UserSpace
-  public init(node: SVGView.SVGNode, userSpace: SVGView.SVGUserSpaceNode.UserSpace)
+  final public let node: SVGNode
+  final public let userSpace: SVGUserSpaceNode.UserSpace
+  public init(node: SVGNode, userSpace: SVGUserSpaceNode.UserSpace)
   public func contentView() -> some SwiftUI.View
   
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class SVGColor : SVGView.SVGPaint {
-  public static let black: SVGView.SVGColor
-  public static let clear: SVGView.SVGColor
-  public static func by(name: Swift.String) -> SVGView.SVGColor?
+@_hasMissingDesignatedInitializers public class SVGColor : SVGPaint {
+  public static let black: SVGColor
+  public static let clear: SVGColor
+  public static func by(name: Swift.String) -> SVGColor?
   final public let value: Swift.Int
   public init(_ value: Swift.Int = 0)
   convenience public init(r: Swift.Int, g: Swift.Int, b: Swift.Int, t: Swift.Int = 0)
@@ -298,10 +298,10 @@ public class SVGUserSpaceNode : SVGView.SVGNode {
   public var b: Swift.Int {
     get
   }
-  override public func opacity(_ opacity: Swift.Double) -> SVGView.SVGColor
+  override public func opacity(_ opacity: Swift.Double) -> SVGColor
   @objc deinit
 }
-public func == (lhs: SVGView.SVGColor, rhs: SVGView.SVGColor) -> Swift.Bool
+public func == (lhs: SVGColor, rhs: SVGColor) -> Swift.Bool
 public class SVGFont {
   final public let name: Swift.String
   final public let size: CoreGraphics.CGFloat
@@ -310,50 +310,50 @@ public class SVGFont {
   public func toSwiftUI() -> SwiftUI.Font
   @objc deinit
 }
-public class SVGLinearGradient : SVGView.SVGGradient {
+public class SVGLinearGradient : SVGGradient {
   final public let x1: CoreGraphics.CGFloat
   final public let y1: CoreGraphics.CGFloat
   final public let x2: CoreGraphics.CGFloat
   final public let y2: CoreGraphics.CGFloat
-  public init(x1: CoreGraphics.CGFloat = 0, y1: CoreGraphics.CGFloat = 0, x2: CoreGraphics.CGFloat = 0, y2: CoreGraphics.CGFloat = 0, userSpace: Swift.Bool = false, stops: [SVGView.SVGStop] = [])
-  convenience public init(degree: CoreGraphics.CGFloat = 0, from: SVGView.SVGColor, to: SVGView.SVGColor)
-  public init(degree: CoreGraphics.CGFloat = 0, stops: [SVGView.SVGStop])
+  public init(x1: CoreGraphics.CGFloat = 0, y1: CoreGraphics.CGFloat = 0, x2: CoreGraphics.CGFloat = 0, y2: CoreGraphics.CGFloat = 0, userSpace: Swift.Bool = false, stops: [SVGStop] = [])
+  convenience public init(degree: CoreGraphics.CGFloat = 0, from: SVGColor, to: SVGColor)
+  public init(degree: CoreGraphics.CGFloat = 0, stops: [SVGStop])
   public func toSwiftUI(rect: CoreGraphics.CGRect) -> SwiftUI.LinearGradient
   @objc deinit
 }
-public class SVGRadialGradient : SVGView.SVGGradient {
+public class SVGRadialGradient : SVGGradient {
   final public let cx: CoreGraphics.CGFloat
   final public let cy: CoreGraphics.CGFloat
   final public let fx: CoreGraphics.CGFloat
   final public let fy: CoreGraphics.CGFloat
   final public let r: CoreGraphics.CGFloat
-  public init(cx: CoreGraphics.CGFloat = 0.5, cy: CoreGraphics.CGFloat = 0.5, fx: CoreGraphics.CGFloat = 0.5, fy: CoreGraphics.CGFloat = 0.5, r: CoreGraphics.CGFloat = 0.5, userSpace: Swift.Bool = false, stops: [SVGView.SVGStop] = [])
+  public init(cx: CoreGraphics.CGFloat = 0.5, cy: CoreGraphics.CGFloat = 0.5, fx: CoreGraphics.CGFloat = 0.5, fy: CoreGraphics.CGFloat = 0.5, r: CoreGraphics.CGFloat = 0.5, userSpace: Swift.Bool = false, stops: [SVGStop] = [])
   public func toSwiftUI(rect: CoreGraphics.CGRect) -> SwiftUI.RadialGradient
   @objc deinit
 }
-@_hasMissingDesignatedInitializers public class SVGGradient : SVGView.SVGPaint, Swift.Equatable {
-  public static func == (lhs: SVGView.SVGGradient, rhs: SVGView.SVGGradient) -> Swift.Bool
+@_hasMissingDesignatedInitializers public class SVGGradient : SVGPaint, Swift.Equatable {
+  public static func == (lhs: SVGGradient, rhs: SVGGradient) -> Swift.Bool
   final public let userSpace: Swift.Bool
-  final public let stops: [SVGView.SVGStop]
-  public init(userSpace: Swift.Bool = false, stops: [SVGView.SVGStop] = [])
+  final public let stops: [SVGStop]
+  public init(userSpace: Swift.Bool = false, stops: [SVGStop] = [])
   @objc deinit
 }
 public class SVGStop : Swift.Equatable {
-  public static func == (lhs: SVGView.SVGStop, rhs: SVGView.SVGStop) -> Swift.Bool
-  final public let color: SVGView.SVGColor
+  public static func == (lhs: SVGStop, rhs: SVGStop) -> Swift.Bool
+  final public let color: SVGColor
   final public let offset: CoreGraphics.CGFloat
-  public init(color: SVGView.SVGColor, offset: CoreGraphics.CGFloat = 0)
+  public init(color: SVGColor, offset: CoreGraphics.CGFloat = 0)
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class SVGPaint {
-  public func opacity(_ opacity: Swift.Double) -> SVGView.SVGPaint
+  public func opacity(_ opacity: Swift.Double) -> SVGPaint
   @objc deinit
 }
 public class SVGPreserveAspectRatio {
-  final public let scaling: SVGView.SVGPreserveAspectRatio.Scaling
-  final public let xAlign: SVGView.SVGPreserveAspectRatio.Align
-  final public let yAlign: SVGView.SVGPreserveAspectRatio.Align
-  public init(scaling: SVGView.SVGPreserveAspectRatio.Scaling = .meet, xAlign: SVGView.SVGPreserveAspectRatio.Align = .mid, yAlign: SVGView.SVGPreserveAspectRatio.Align = .mid)
+  final public let scaling: SVGPreserveAspectRatio.Scaling
+  final public let xAlign: SVGPreserveAspectRatio.Align
+  final public let yAlign: SVGPreserveAspectRatio.Align
+  public init(scaling: SVGPreserveAspectRatio.Scaling = .meet, xAlign: SVGPreserveAspectRatio.Align = .mid, yAlign: SVGPreserveAspectRatio.Align = .mid)
   public func layout(size: CoreGraphics.CGSize, into sizeToFitIn: CoreGraphics.CGSize) -> CoreGraphics.CGAffineTransform
   public func layout(rect: CoreGraphics.CGRect, into sizeToFitIn: CoreGraphics.CGSize) -> CoreGraphics.CGAffineTransform
   public func slice(size: CoreGraphics.CGSize, into rectToFitIn: CoreGraphics.CGRect) -> CoreGraphics.CGRect?
@@ -364,9 +364,9 @@ public class SVGPreserveAspectRatio {
     public func align(outer: CoreGraphics.CGFloat, inner: CoreGraphics.CGFloat) -> CoreGraphics.CGFloat
     public func align(size: CoreGraphics.CGFloat) -> CoreGraphics.CGFloat
     public init?(rawValue: Swift.String)
-    public typealias AllCases = [SVGView.SVGPreserveAspectRatio.Align]
+    public typealias AllCases = [SVGPreserveAspectRatio.Align]
     public typealias RawValue = Swift.String
-    public static var allCases: [SVGView.SVGPreserveAspectRatio.Align] {
+    public static var allCases: [SVGPreserveAspectRatio.Align] {
       get
     }
     public var rawValue: Swift.String {
@@ -381,9 +381,9 @@ public class SVGPreserveAspectRatio {
     public func fit(rect: CoreGraphics.CGRect, into rectToFitIn: CoreGraphics.CGRect) -> CoreGraphics.CGSize
     public func fit(size: CoreGraphics.CGSize, into rectToFitIn: CoreGraphics.CGRect) -> CoreGraphics.CGSize
     public init?(rawValue: Swift.String)
-    public typealias AllCases = [SVGView.SVGPreserveAspectRatio.Scaling]
+    public typealias AllCases = [SVGPreserveAspectRatio.Scaling]
     public typealias RawValue = Swift.String
-    public static var allCases: [SVGView.SVGPreserveAspectRatio.Scaling] {
+    public static var allCases: [SVGPreserveAspectRatio.Scaling] {
       get
     }
     public var rawValue: Swift.String {
@@ -393,18 +393,18 @@ public class SVGPreserveAspectRatio {
   @objc deinit
 }
 public class SVGStroke {
-  final public let fill: SVGView.SVGPaint
+  final public let fill: SVGPaint
   final public let width: CoreGraphics.CGFloat
   final public let cap: CoreGraphics.CGLineCap
   final public let join: CoreGraphics.CGLineJoin
   final public let miterLimit: CoreGraphics.CGFloat
   final public let dashes: [CoreGraphics.CGFloat]
   final public let offset: CoreGraphics.CGFloat
-  public init(fill: SVGView.SVGPaint = SVGColor.black, width: CoreGraphics.CGFloat = 1, cap: CoreGraphics.CGLineCap = .butt, join: CoreGraphics.CGLineJoin = .miter, miterLimit: CoreGraphics.CGFloat = 4, dashes: [CoreGraphics.CGFloat] = [], offset: CoreGraphics.CGFloat = 0.0)
+  public init(fill: SVGPaint = SVGColor.black, width: CoreGraphics.CGFloat = 1, cap: CoreGraphics.CGLineCap = .butt, join: CoreGraphics.CGLineJoin = .miter, miterLimit: CoreGraphics.CGFloat = 4, dashes: [CoreGraphics.CGFloat] = [], offset: CoreGraphics.CGFloat = 0.0)
   public func toSwiftUI() -> SwiftUI.StrokeStyle
   @objc deinit
 }
-public class SVGCircle : SVGView.SVGShape, Combine.ObservableObject {
+public class SVGCircle : SVGShape, Combine.ObservableObject {
   @Combine.Published @_projectedValueProperty($cx) public var cx: CoreGraphics.CGFloat {
     get
     set
@@ -442,7 +442,7 @@ public class SVGCircle : SVGView.SVGShape, Combine.ObservableObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public class SVGEllipse : SVGView.SVGShape, Combine.ObservableObject {
+public class SVGEllipse : SVGShape, Combine.ObservableObject {
   @Combine.Published @_projectedValueProperty($cx) public var cx: CoreGraphics.CGFloat {
     get
     set
@@ -490,7 +490,7 @@ public class SVGEllipse : SVGView.SVGShape, Combine.ObservableObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public class SVGLine : SVGView.SVGShape, Combine.ObservableObject {
+public class SVGLine : SVGShape, Combine.ObservableObject {
   @Combine.Published @_projectedValueProperty($x1) public var x1: CoreGraphics.CGFloat {
     get
     set
@@ -539,13 +539,13 @@ public class SVGLine : SVGView.SVGShape, Combine.ObservableObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public class SVGPath : SVGView.SVGShape, Combine.ObservableObject {
-  @Combine.Published @_projectedValueProperty($segments) public var segments: [SVGView.PathSegment] {
+public class SVGPath : SVGShape, Combine.ObservableObject {
+  @Combine.Published @_projectedValueProperty($segments) public var segments: [PathSegment] {
     get
     set
     _modify
   }
-  public var $segments: Combine.Published<[SVGView.PathSegment]>.Publisher {
+  public var $segments: Combine.Published<[PathSegment]>.Publisher {
     get
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
@@ -560,7 +560,7 @@ public class SVGPath : SVGView.SVGShape, Combine.ObservableObject {
     @available(iOS 14.0, tvOS 14.0, watchOS 7.0, macOS 11.0, *)
     set
   }
-  public init(segments: [SVGView.PathSegment] = [], fillRule: CoreGraphics.CGPathFillRule = .winding)
+  public init(segments: [PathSegment] = [], fillRule: CoreGraphics.CGPathFillRule = .winding)
   override public func frame() -> CoreGraphics.CGRect
   override public func bounds() -> CoreGraphics.CGRect
   public func contentView() -> some SwiftUI.View
@@ -568,7 +568,7 @@ public class SVGPath : SVGView.SVGShape, Combine.ObservableObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public class SVGPolygon : SVGView.SVGShape, Combine.ObservableObject {
+public class SVGPolygon : SVGShape, Combine.ObservableObject {
   @Combine.Published @_projectedValueProperty($points) public var points: [CoreGraphics.CGPoint] {
     get
     set
@@ -588,7 +588,7 @@ public class SVGPolygon : SVGView.SVGShape, Combine.ObservableObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public class SVGPolyline : SVGView.SVGShape, Combine.ObservableObject {
+public class SVGPolyline : SVGShape, Combine.ObservableObject {
   @Combine.Published @_projectedValueProperty($points) public var points: [CoreGraphics.CGPoint] {
     get
     set
@@ -608,7 +608,7 @@ public class SVGPolyline : SVGView.SVGShape, Combine.ObservableObject {
   public typealias ObjectWillChangePublisher = Combine.ObservableObjectPublisher
   @objc deinit
 }
-public class SVGRect : SVGView.SVGShape, Combine.ObservableObject {
+public class SVGRect : SVGShape, Combine.ObservableObject {
   @Combine.Published @_projectedValueProperty($x) public var x: CoreGraphics.CGFloat {
     get
     set
@@ -684,13 +684,13 @@ public class SVGRect : SVGView.SVGShape, Combine.ObservableObject {
   @objc deinit
 }
 public struct SVGParser {
-  public static func parse(contentsOf url: Foundation.URL, settings: SVGView.SVGSettings = .default) -> SVGView.SVGNode?
-  public static func parse(data: Foundation.Data, settings: SVGView.SVGSettings = .default) -> SVGView.SVGNode?
-  public static func parse(string: Swift.String, settings: SVGView.SVGSettings = .default) -> SVGView.SVGNode?
-  public static func parse(stream: Foundation.InputStream, settings: SVGView.SVGSettings = .default) -> SVGView.SVGNode?
-  public static func parse(xml: SVGView.XMLElement?, settings: SVGView.SVGSettings = .default) -> SVGView.SVGNode?
+  public static func parse(contentsOf url: Foundation.URL, settings: SVGSettings = .default) -> SVGNode?
+  public static func parse(data: Foundation.Data, settings: SVGSettings = .default) -> SVGNode?
+  public static func parse(string: Swift.String, settings: SVGSettings = .default) -> SVGNode?
+  public static func parse(stream: Foundation.InputStream, settings: SVGSettings = .default) -> SVGNode?
+  public static func parse(xml: XMLElement?, settings: SVGSettings = .default) -> SVGNode?
   @available(*, deprecated, message: "Use parse(contentsOf:) function instead")
-  public static func parse(fileURL: Foundation.URL) -> SVGView.SVGNode?
+  public static func parse(fileURL: Foundation.URL) -> SVGNode?
 }
 @objc @_inheritsConvenienceInitializers public class SVGHelper : ObjectiveC.NSObject {
   @objc override dynamic public init()
@@ -719,74 +719,74 @@ public enum PathSegmentType {
   case t
   case E
   case e
-  public static func == (a: SVGView.PathSegmentType, b: SVGView.PathSegmentType) -> Swift.Bool
+  public static func == (a: PathSegmentType, b: PathSegmentType) -> Swift.Bool
   public func hash(into hasher: inout Swift.Hasher)
   public var hashValue: Swift.Int {
     get
   }
 }
 public class PathSegment {
-  final public let type: SVGView.PathSegmentType
+  final public let type: PathSegmentType
   final public let data: [CoreGraphics.CGFloat]
-  public init(type: SVGView.PathSegmentType = .M, data: [CoreGraphics.CGFloat] = [])
+  public init(type: PathSegmentType = .M, data: [CoreGraphics.CGFloat] = [])
   open func isAbsolute() -> Swift.Bool
   @objc deinit
 }
 public struct SVGView : SwiftUI.View {
-  public let svg: SVGView.SVGNode?
+  public let svg: SVGNode?
   public init(contentsOf url: Foundation.URL)
   @available(*, deprecated, message: "Use (contentsOf:) initializer instead")
   public init(fileURL: Foundation.URL)
   public init(data: Foundation.Data)
   public init(string: Swift.String)
   public init(stream: Foundation.InputStream)
-  public init(xml: SVGView.XMLElement)
-  public init(svg: SVGView.SVGNode)
-  public func getNode(byId id: Swift.String) -> SVGView.SVGNode?
+  public init(xml: XMLElement)
+  public init(svg: SVGNode)
+  public func getNode(byId id: Swift.String) -> SVGNode?
   @_Concurrency.MainActor(unsafe) public var body: some SwiftUI.View {
     get
   }
   public typealias Body = @_opaqueReturnTypeOf("$s7SVGViewAAV4bodyQrvp", 0) __
 }
 @_hasMissingDesignatedInitializers public class SVGLinker {
-  public static let none: SVGView.SVGLinker
-  public static func base(url: Foundation.URL) -> SVGView.SVGLinker
-  public static func relative(to svgURL: Foundation.URL) -> SVGView.SVGLinker
+  public static let none: SVGLinker
+  public static func base(url: Foundation.URL) -> SVGLinker
+  public static func relative(to svgURL: Foundation.URL) -> SVGLinker
   public func load(src: Swift.String) throws -> Foundation.Data?
   @objc deinit
 }
 @_hasMissingDesignatedInitializers public class SVGLogger {
-  public static let console: SVGView.SVGLogger
+  public static let console: SVGLogger
   public func log(message: Swift.String)
   public func log(error: Swift.Error)
   @objc deinit
 }
 public struct SVGSettings {
-  public static let `default`: SVGView.SVGSettings
-  public let linker: SVGView.SVGLinker
-  public let logger: SVGView.SVGLogger
+  public static let `default`: SVGSettings
+  public let linker: SVGLinker
+  public let logger: SVGLogger
   public let fontSize: CoreGraphics.CGFloat
   public let ppi: Swift.Double
-  public init(linker: SVGView.SVGLinker = .none, logger: SVGView.SVGLogger = .console, fontSize: CoreGraphics.CGFloat = 16, ppi: CoreGraphics.CGFloat = 96)
+  public init(linker: SVGLinker = .none, logger: SVGLogger = .console, fontSize: CoreGraphics.CGFloat = 16, ppi: CoreGraphics.CGFloat = 96)
 }
 public struct DOMParser {
-  public static func parse(contentsOf url: Foundation.URL, logger: SVGView.SVGLogger = .console) -> SVGView.XMLElement?
+  public static func parse(contentsOf url: Foundation.URL, logger: SVGLogger = .console) -> XMLElement?
   @available(*, deprecated, message: "Use parse(contentsOf:) function instead")
-  public static func parse(fileURL: Foundation.URL, logger: SVGView.SVGLogger = .console) -> SVGView.XMLElement?
-  public static func parse(data: Foundation.Data, logger: SVGView.SVGLogger = .console) -> SVGView.XMLElement?
-  public static func parse(string: Swift.String?, using encoding: Swift.String.Encoding = .utf8, logger: SVGView.SVGLogger = .console) -> SVGView.XMLElement?
-  public static func parse(stream: Foundation.InputStream, logger: SVGView.SVGLogger = .console) -> SVGView.XMLElement?
+  public static func parse(fileURL: Foundation.URL, logger: SVGLogger = .console) -> XMLElement?
+  public static func parse(data: Foundation.Data, logger: SVGLogger = .console) -> XMLElement?
+  public static func parse(string: Swift.String?, using encoding: Swift.String.Encoding = .utf8, logger: SVGLogger = .console) -> XMLElement?
+  public static func parse(stream: Foundation.InputStream, logger: SVGLogger = .console) -> XMLElement?
 }
 public protocol XMLNode {
 }
-public class XMLElement : SVGView.XMLNode {
+public class XMLElement : XMLNode {
   final public let name: Swift.String
-  public var contents: [SVGView.XMLNode]
+  public var contents: [XMLNode]
   public var attributes: [Swift.String : Swift.String]
   public init(name: Swift.String, attributes: [Swift.String : Swift.String])
   @objc deinit
 }
-public class XMLText : SVGView.XMLNode {
+public class XMLText : XMLNode {
   public var text: Swift.String
   public init(text: Swift.String)
   @objc deinit
@@ -794,17 +794,17 @@ public class XMLText : SVGView.XMLNode {
 extension Swift.Bool {
   public func serialize() -> Swift.String
 }
-extension SVGView.SVGUserSpaceNode.UserSpace : Swift.Equatable {}
-extension SVGView.SVGUserSpaceNode.UserSpace : Swift.CaseIterable {}
-extension SVGView.SVGUserSpaceNode.UserSpace : Swift.RawRepresentable {}
-extension SVGView.SVGUserSpaceNode.UserSpace : Swift.Hashable {}
-extension SVGView.SVGPreserveAspectRatio.Align : Swift.Equatable {}
-extension SVGView.SVGPreserveAspectRatio.Align : Swift.CaseIterable {}
-extension SVGView.SVGPreserveAspectRatio.Align : Swift.RawRepresentable {}
-extension SVGView.SVGPreserveAspectRatio.Align : Swift.Hashable {}
-extension SVGView.SVGPreserveAspectRatio.Scaling : Swift.Equatable {}
-extension SVGView.SVGPreserveAspectRatio.Scaling : Swift.CaseIterable {}
-extension SVGView.SVGPreserveAspectRatio.Scaling : Swift.RawRepresentable {}
-extension SVGView.SVGPreserveAspectRatio.Scaling : Swift.Hashable {}
-extension SVGView.PathSegmentType : Swift.Equatable {}
-extension SVGView.PathSegmentType : Swift.Hashable {}
+extension SVGUserSpaceNode.UserSpace : Swift.Equatable {}
+extension SVGUserSpaceNode.UserSpace : Swift.CaseIterable {}
+extension SVGUserSpaceNode.UserSpace : Swift.RawRepresentable {}
+extension SVGUserSpaceNode.UserSpace : Swift.Hashable {}
+extension SVGPreserveAspectRatio.Align : Swift.Equatable {}
+extension SVGPreserveAspectRatio.Align : Swift.CaseIterable {}
+extension SVGPreserveAspectRatio.Align : Swift.RawRepresentable {}
+extension SVGPreserveAspectRatio.Align : Swift.Hashable {}
+extension SVGPreserveAspectRatio.Scaling : Swift.Equatable {}
+extension SVGPreserveAspectRatio.Scaling : Swift.CaseIterable {}
+extension SVGPreserveAspectRatio.Scaling : Swift.RawRepresentable {}
+extension SVGPreserveAspectRatio.Scaling : Swift.Hashable {}
+extension PathSegmentType : Swift.Equatable {}
+extension PathSegmentType : Swift.Hashable {}
