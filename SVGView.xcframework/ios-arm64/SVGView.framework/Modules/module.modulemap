@@ -1,0 +1,4 @@
+framework module SVGView {
+  header "SVGView-Swift.h"
+  requires objc
+}
