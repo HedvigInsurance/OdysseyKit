@@ -16,27 +16,33 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "OdysseyKit",
-            path: "OdysseyKit.xcframework"
+            url: "https", // OdysseyKit URL
+            checksum: "" // OdysseyKit Checksum
         ),
         .binaryTarget(
             name: "Odyssey",
-            path: "Odyssey.xcframework"
+            url: "https", // Odyssey URL
+            checksum: "" // Odyssey Checksum
         ),
         .binaryTarget(
             name: "KMPNativeCoroutinesCore",
-            path: "KMPNativeCoroutinesCore.xcframework"
+            url: "https", // KMPNativeCoroutinesCore URL
+            checksum: "" // KMPNativeCoroutinesCore Checksum
         ),
         .binaryTarget(
             name: "KMPNativeCoroutinesAsync",
-            path: "KMPNativeCoroutinesAsync.xcframework"
+            url: "https", // KMPNativeCoroutinesAsync URL
+            checksum: "" // KMPNativeCoroutinesAsync Checksum
         ),
         .binaryTarget(
             name: "SVGView",
-            path: "SVGView.xcframework"
+            url: "https", // SVGView URL
+            checksum: "" // SVGView Checksum
         ),
         .binaryTarget(
             name: "UIPilot",
-            path: "UIPilot.xcframework"
+            url: "https", // UIPilot URL
+            checksum: "" // UIPilot Checksum
         ),
         .target(
             name: "OdysseyKitTargets",
