@@ -19,6 +19,10 @@ let package = Package(
             path: "OdysseyKit.xcframework"
         ),
         .binaryTarget(
+            name: "Odyssey",
+            path: "Odyssey.xcframework"
+        ),
+        .binaryTarget(
             name: "KMPNativeCoroutinesCore",
             path: "KMPNativeCoroutinesCore.xcframework"
         ),
@@ -41,7 +45,8 @@ let package = Package(
                .target(name: "KMPNativeCoroutinesCore"),
                .target(name: "KMPNativeCoroutinesAsync"),
                .target(name: "SVGView"),
-               .target(name: "UIPilot")
+               .target(name: "UIPilot"),
+               .target(name: "Odyssey")
             ],
             path: "OdysseyKitTargets"
         )
