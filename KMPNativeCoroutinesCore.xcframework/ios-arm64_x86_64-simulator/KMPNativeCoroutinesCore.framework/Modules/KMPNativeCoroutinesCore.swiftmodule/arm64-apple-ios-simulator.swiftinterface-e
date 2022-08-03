@@ -1,0 +1,9 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.6.1 (swiftlang-5.6.0.323.66 clang-1316.0.20.12)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name KMPNativeCoroutinesCore
+import Swift
+import _Concurrency
+public typealias NativeCallback<T, Unit> = (T, Unit) -> Unit
+public typealias NativeCancellable<Unit> = () -> Unit
+public typealias NativeFlow<Output, Failure, Unit> = (_ onItem: @escaping KMPNativeCoroutinesCore.NativeCallback<Output, Unit>, _ onComplete: @escaping KMPNativeCoroutinesCore.NativeCallback<Failure?, Unit>) -> KMPNativeCoroutinesCore.NativeCancellable<Unit> where Failure : Swift.Error
+public typealias NativeSuspend<Result, Failure, Unit> = (_ onResult: @escaping KMPNativeCoroutinesCore.NativeCallback<Result, Unit>, _ onError: @escaping KMPNativeCoroutinesCore.NativeCallback<Failure, Unit>) -> KMPNativeCoroutinesCore.NativeCancellable<Unit> where Failure : Swift.Error
