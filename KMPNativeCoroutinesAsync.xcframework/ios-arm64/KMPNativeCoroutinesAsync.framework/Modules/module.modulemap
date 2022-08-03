@@ -1,4 +1,0 @@
-framework module KMPNativeCoroutinesAsync {
-  header "KMPNativeCoroutinesAsync-Swift.h"
-  requires objc
-}

@@ -1,6 +1,0 @@
-framework module Odyssey {
-    umbrella header "Odyssey.h"
-
-    export *
-    module * { export * }
-}
