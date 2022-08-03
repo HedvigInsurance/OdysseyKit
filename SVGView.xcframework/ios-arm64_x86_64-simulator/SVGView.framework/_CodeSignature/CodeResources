@@ -10,7 +10,7 @@
 		</data>
 		<key>Info.plist</key>
 		<data>
-		rzaFiW/ILXaySMPb+DALybG/Apc=
+		TTp8aiDtORsbm6iqfoXXvl4iqkA=
 		</data>
 		<key>Modules/SVGView.swiftmodule/arm64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/SVGView.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		JlkuHVyOxaBd5HIKYYlZ+RiSuaI=
+		d8cgWYKFF9eRR9hZCSZ7jj+QCtU=
 		</data>
 		<key>Modules/SVGView.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
 		<data>
@@ -34,7 +34,7 @@
 		</data>
 		<key>Modules/SVGView.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		KZvVb7lZ0mYVV4yUXJx+18U7w/Q=
+		4Hzc5FWkyCNxOsJJ1eGmfudXHCE=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -80,11 +80,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			JlkuHVyOxaBd5HIKYYlZ+RiSuaI=
+			d8cgWYKFF9eRR9hZCSZ7jj+QCtU=
 			</data>
 			<key>hash2</key>
 			<data>
-			Ha644MlZ0PPISMynHEFFKzlqoRYURg/PAwu86havSIc=
+			K2a1gYXwDoP3PLX573tKEy7ZNogN53wgslODY/2jg6E=
 			</data>
 		</dict>
 		<key>Modules/SVGView.swiftmodule/x86_64-apple-ios-simulator.swiftdoc</key>
@@ -113,11 +113,11 @@
 		<dict>
 			<key>hash</key>
 			<data>
-			KZvVb7lZ0mYVV4yUXJx+18U7w/Q=
+			4Hzc5FWkyCNxOsJJ1eGmfudXHCE=
 			</data>
 			<key>hash2</key>
 			<data>
-			Bw+Ha0crVlewwAP9QjwngEBe9Nc2P4J7b1f29By8A10=
+			J4QOuJ/9xuxFYXGA8ZnWV8wqvXO3msHZZVPkoxfNa7U=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
