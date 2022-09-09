@@ -16,33 +16,33 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "OdysseyKit",
-            url: "https://github.com/HedvigInsurance/OdysseyKit/raw/e0d6e463de4c6dd74633ae9cbfc6828e54e51f9e/OdysseyKit.xcframework.zip",// OdysseyKit URL
-            checksum: "f6271962427315a971ebbec5ac37ae0a2c272b3224fdbbcd1f0f41d1bc7a8196"// OdysseyKit Checksum
+            url: "https://github.com/HedvigInsurance/OdysseyKit/raw/0051f529cbfe65209061da4b6e1b4db4850f1a52/OdysseyKit.xcframework.zip",// OdysseyKit URL
+            checksum: "99b2774800e67e0e603ebf3b671892edef0dd40eb33342d1c3ac38ac54ae9469"// OdysseyKit Checksum
         ),
         .binaryTarget(
             name: "Odyssey",
-            url: "https://github.com/HedvigInsurance/OdysseyKit/raw/e0d6e463de4c6dd74633ae9cbfc6828e54e51f9e/Odyssey.xcframework.zip",// Odyssey URL
-            checksum: "9df1efe468182b539cb251831cb3f4c5406c65b5180da2f78f71f4649389dac1"// Odyssey Checksum
+            url: "https://github.com/HedvigInsurance/OdysseyKit/raw/0051f529cbfe65209061da4b6e1b4db4850f1a52/Odyssey.xcframework.zip",// Odyssey URL
+            checksum: "89725c4dc26f55d863f3deb1aa84a64e6e45df9bfbdb861ab4a81b19ec5f1194"// Odyssey Checksum
         ),
         .binaryTarget(
             name: "KMPNativeCoroutinesCore",
-            url: "https://github.com/HedvigInsurance/OdysseyKit/raw/e0d6e463de4c6dd74633ae9cbfc6828e54e51f9e/KMPNativeCoroutinesCore.xcframework.zip",// KMPNativeCoroutinesCore URL
-            checksum: "33d88d2bdc97f5c3b51e2e82cb3bd896c63012bf1e2300cd8ca84df894f9cc0d"// KMPNativeCoroutinesCore Checksum
+            url: "https://github.com/HedvigInsurance/OdysseyKit/raw/0051f529cbfe65209061da4b6e1b4db4850f1a52/KMPNativeCoroutinesCore.xcframework.zip",// KMPNativeCoroutinesCore URL
+            checksum: "e26c09c004e609ddd0fa2e2b68d34e3855324958737708b23d1e7fee8b5178ba"// KMPNativeCoroutinesCore Checksum
         ),
         .binaryTarget(
             name: "KMPNativeCoroutinesAsync",
-            url: "https://github.com/HedvigInsurance/OdysseyKit/raw/e0d6e463de4c6dd74633ae9cbfc6828e54e51f9e/KMPNativeCoroutinesAsync.xcframework.zip",// KMPNativeCoroutinesAsync URL
-            checksum: "7b1f0476f8527b87671b4f9dc99f815cdad11ae938e528179fd6631f2cd57d13"// KMPNativeCoroutinesAsync Checksum
+            url: "https://github.com/HedvigInsurance/OdysseyKit/raw/0051f529cbfe65209061da4b6e1b4db4850f1a52/KMPNativeCoroutinesAsync.xcframework.zip",// KMPNativeCoroutinesAsync URL
+            checksum: "fdbc8165402c5a01a3f506055747ff4da2eb23595138ef07d7bec0eb22f582d6"// KMPNativeCoroutinesAsync Checksum
         ),
         .binaryTarget(
             name: "SVGView",
-            url: "https://github.com/HedvigInsurance/OdysseyKit/raw/e0d6e463de4c6dd74633ae9cbfc6828e54e51f9e/SVGView.xcframework.zip",// SVGView URL
-            checksum: "327a31e375503718f12589ce944afc689fcadf7613eaab8880c6476bbdd58f8a"// SVGView Checksum
+            url: "https://github.com/HedvigInsurance/OdysseyKit/raw/0051f529cbfe65209061da4b6e1b4db4850f1a52/SVGView.xcframework.zip",// SVGView URL
+            checksum: "44608cb03b81f0dc7d8e0ae9b1f9194eb3a476b0843e33fd96ff5b286fb15931"// SVGView Checksum
         ),
         .binaryTarget(
             name: "UIPilot",
-            url: "https://github.com/HedvigInsurance/OdysseyKit/raw/e0d6e463de4c6dd74633ae9cbfc6828e54e51f9e/UIPilot.xcframework.zip",// UIPilot URL
-            checksum: "2d83f385e90c1025a98d73d9fe93714fce8be7ee2dac4d5d5c7fb368df007a93"// UIPilot Checksum
+            url: "https://github.com/HedvigInsurance/OdysseyKit/raw/0051f529cbfe65209061da4b6e1b4db4850f1a52/UIPilot.xcframework.zip",// UIPilot URL
+            checksum: "6146c5378e774842c6f7944f22ddad52506663b74f96607d841cb1e67bc59ad2"// UIPilot Checksum
         ),
         .target(
             name: "OdysseyKitTargets",
