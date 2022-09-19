@@ -44,6 +44,21 @@ let package = Package(
             url: "https://github.com/HedvigInsurance/OdysseyKit/raw/b96fb60fa20577245d62283c428f60e1003f5c5b/UIPilot.xcframework.zip",// UIPilot URL
             checksum: "7f769afb1884e3b33a9c8910821ec364fb99e60f8c02bd416d64f3c3937ba123"// UIPilot Checksum
         ),
+        .binaryTarget(
+            name: "FlexboxSwiftUI",
+            url: "https://github.com/HedvigInsurance/OdysseyKit/raw/b96fb60fa20577245d62283c428f60e1003f5c5b/UIPilot.xcframework.zip",// FlexboxSwiftUI URL
+            checksum: "7f769afb1884e3b33a9c8910821ec364fb99e60f8c02bd416d64f3c3937ba123"// FlexboxSwiftUI Checksum
+        ),
+        .binaryTarget(
+            name: "FlexboxSwiftUIObjC",
+            url: "https://github.com/HedvigInsurance/OdysseyKit/raw/b96fb60fa20577245d62283c428f60e1003f5c5b/UIPilot.xcframework.zip",// FlexboxSwiftUIObjC URL
+            checksum: "7f769afb1884e3b33a9c8910821ec364fb99e60f8c02bd416d64f3c3937ba123"// FlexboxSwiftUIObjC Checksum
+        ),
+        .binaryTarget(
+            name: "Placement",
+            url: "https://github.com/HedvigInsurance/OdysseyKit/raw/b96fb60fa20577245d62283c428f60e1003f5c5b/Placement.xcframework.zip",// Placement URL
+            checksum: "7f769afb1884e3b33a9c8910821ec364fb99e60f8c02bd416d64f3c3937ba123"// Placement Checksum
+        ),
         .target(
             name: "OdysseyKitTargets",
             dependencies: [
@@ -52,7 +67,9 @@ let package = Package(
                .target(name: "KMPNativeCoroutinesCore"),
                .target(name: "KMPNativeCoroutinesAsync"),
                .target(name: "SVGView"),
-               .target(name: "UIPilot"),
+               .target(name: "FlexboxSwiftUI"),
+               .target(name: "FlexboxSwiftUIObjC"),
+               .target(name: "Placement"),
             ],
             path: "OdysseyKitTargets"
         )
