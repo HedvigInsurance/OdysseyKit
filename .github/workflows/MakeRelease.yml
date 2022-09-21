@@ -14,8 +14,9 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: fwilhe2/bump-version@main
+      - name: Get next version
         id: bump
+        uses: technote-space/get-next-version-action@v1
       - run: git checkout artifacts
       - run: |
           set -x
@@ -24,7 +25,7 @@ jobs:
             assets+=("-a" "$asset")
           done
           tag_name="${GITHUB_REF##*/}"
-          hub release create "${assets[@]}" -m "${{ steps.bump.outputs.newVersion }}" "${{ steps.bump.outputs.newVersion }}"
+          hub release create "${assets[@]}" -m "${{ steps.bump.outputs.next }}" "${{ steps.bump.outputs.next }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - run: git checkout main
@@ -35,15 +36,15 @@ jobs:
             sed -i '' "s/url: \".*\",\/\/ $2 URL/url: \"$BASE_URL\/$2.xcframework.zip\",\/\/ $2 URL/g" Package.swift
           }
 
-          replaceURL "${{ steps.bump.outputs.newVersion }}" "Odyssey"
-          replaceURL "${{ steps.bump.outputs.newVersion }}" "OdysseyKit"
-          replaceURL "${{ steps.bump.outputs.newVersion }}" "KMPNativeCoroutinesCore"
-          replaceURL "${{ steps.bump.outputs.newVersion }}" "KMPNativeCoroutinesAsync"
-          replaceURL "${{ steps.bump.outputs.newVersion }}" "SVGView"
-          replaceURL "${{ steps.bump.outputs.newVersion }}" "UIPilot"
-          replaceURL "${{ steps.bump.outputs.newVersion }}" "FlexboxSwiftUI"
-          replaceURL "${{ steps.bump.outputs.newVersion }}" "FlexboxSwiftUIObjC"
-          replaceURL "${{ steps.bump.outputs.newVersion }}" "Placement"
+          replaceURL "${{ steps.bump.outputs.next }}" "Odyssey"
+          replaceURL "${{ steps.bump.outputs.next }}" "OdysseyKit"
+          replaceURL "${{ steps.bump.outputs.next }}" "KMPNativeCoroutinesCore"
+          replaceURL "${{ steps.bump.outputs.next }}" "KMPNativeCoroutinesAsync"
+          replaceURL "${{ steps.bump.outputs.next }}" "SVGView"
+          replaceURL "${{ steps.bump.outputs.next }}" "UIPilot"
+          replaceURL "${{ steps.bump.outputs.next }}" "FlexboxSwiftUI"
+          replaceURL "${{ steps.bump.outputs.next }}" "FlexboxSwiftUIObjC"
+          replaceURL "${{ steps.bump.outputs.next }}" "Placement"
       - name: Update resources
         uses: test-room-7/action-update-file@v1
         with:
