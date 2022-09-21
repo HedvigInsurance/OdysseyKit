@@ -19,6 +19,8 @@ jobs:
       - run: git checkout artifacts_copy
       - run: git branch --delete artifacts
       - run: git checkout -b artifacts
+      - run: git config --global user.email "ios@hedvig.com"
+      - run: git config --global user.name "Hedvig iOS"
       - run: git cherry-pick artifacts_copy
       - run: git branch --delete artifacts_copy
       - run: git push --force
