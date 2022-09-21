@@ -3,7 +3,7 @@ name: Make release tag
 on:
   push:
     branches:
-      - main
+      - artifacts/*
 
 jobs:
   release-on-push:
@@ -17,7 +17,6 @@ jobs:
       - name: Get next version
         id: bump
         uses: technote-space/get-next-version-action@v1
-      - run: git checkout artifacts
       - run: |
           set -x
           assets=()
@@ -28,7 +27,6 @@ jobs:
           hub release create "${assets[@]}" -m "${{ steps.bump.outputs.next }}" "${{ steps.bump.outputs.next }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - run: git checkout main
       - name: Update Package.swift
         run: |
           function replaceURL {
@@ -42,17 +40,15 @@ jobs:
           replaceURL "${{ steps.bump.outputs.next }}" "KMPNativeCoroutinesAsync"
           replaceURL "${{ steps.bump.outputs.next }}" "SVGView"
           replaceURL "${{ steps.bump.outputs.next }}" "UIPilot"
-          replaceURL "${{ steps.bump.outputs.next }}" "FlexboxSwiftUI"
-          replaceURL "${{ steps.bump.outputs.next }}" "FlexboxSwiftUIObjC"
-          replaceURL "${{ steps.bump.outputs.next }}" "Placement"
       - name: Update resources
         uses: test-room-7/action-update-file@v1
         with:
           file-path: Package.swift
           commit-msg: Update Package.swift
           github-token: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
       - name: Delete branch
         uses: dawidd6/action-delete-branch@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          branches: artifacts
+          branches: ${{ github.head_ref }}
