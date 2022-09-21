@@ -22,6 +22,8 @@ jobs:
       - run: git config --global user.email "ios@hedvig.com"
       - run: git config --global user.name "Hedvig iOS"
       - run: git checkout artifacts_copy -- *.zip
+      - run: git add .
+      - run: git commit -m "Reset head"
       - run: git branch --delete artifacts_copy
       - run: git push --set-upstream origin artifacts --force
       - uses: rymndhng/release-on-push-action@master
