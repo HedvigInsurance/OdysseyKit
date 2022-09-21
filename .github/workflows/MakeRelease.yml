@@ -14,10 +14,13 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - uses: MeilCli/bump-release-action@v1
+      - name: Get next version
+        uses: anothrNick/github-tag-action@1.40.0
         id: bump
-        with:
-          dry_run: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          WITH_V: true
+          DRY_RUN: true
       - run: |
           set -x
           assets=()
@@ -25,7 +28,7 @@ jobs:
             assets+=("-a" "$asset")
           done
           tag_name="${GITHUB_REF##*/}"
-          hub release create "${assets[@]}" -m "${{ steps.bump.outputs.next_version }}" "${{ steps.bump.outputs.next_version }}"
+          hub release create "${assets[@]}" -m "${{ steps.bump.outputs.new_tag }}" "${{ steps.bump.outputs.new_tag }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Update Package.swift
@@ -35,12 +38,12 @@ jobs:
             sed -i '' "s/url: \".*\",\/\/ $2 URL/url: \"$BASE_URL\/$2.xcframework.zip\",\/\/ $2 URL/g" Package.swift
           }
 
-          replaceURL "${{ steps.bump.outputs.next_version }}" "Odyssey"
-          replaceURL "${{ steps.bump.outputs.next_version }}" "OdysseyKit"
-          replaceURL "${{ steps.bump.outputs.next_version }}" "KMPNativeCoroutinesCore"
-          replaceURL "${{ steps.bump.outputs.next_version }}" "KMPNativeCoroutinesAsync"
-          replaceURL "${{ steps.bump.outputs.next_version }}" "SVGView"
-          replaceURL "${{ steps.bump.outputs.next_version }}" "UIPilot"
+          replaceURL "${{ steps.bump.outputs.new_tag }}" "Odyssey"
+          replaceURL "${{ steps.bump.outputs.new_tag }}" "OdysseyKit"
+          replaceURL "${{ steps.bump.outputs.new_tag }}" "KMPNativeCoroutinesCore"
+          replaceURL "${{ steps.bump.outputs.new_tag }}" "KMPNativeCoroutinesAsync"
+          replaceURL "${{ steps.bump.outputs.new_tag }}" "SVGView"
+          replaceURL "${{ steps.bump.outputs.new_tag }}" "UIPilot"
       - name: Update resources
         uses: test-room-7/action-update-file@v1
         with:
