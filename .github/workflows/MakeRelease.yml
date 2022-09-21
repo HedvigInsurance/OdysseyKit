@@ -16,6 +16,7 @@ jobs:
           fetch-depth: 0
       - run: git checkout artifacts
       - run: git branch artifacts_copy
+      - run: git checkout artifacts_copy
       - run: git branch --delete artifacts
       - run: git checkout -b artifacts
       - run: git cherry-pick artifacts_copy
