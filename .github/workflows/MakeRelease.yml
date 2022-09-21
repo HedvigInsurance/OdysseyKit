@@ -21,7 +21,7 @@ jobs:
       - run: git checkout -b artifacts
       - run: git config --global user.email "ios@hedvig.com"
       - run: git config --global user.name "Hedvig iOS"
-      - run: git cherry-pick artifacts_copy --strategy-option=theirs
+      - run: git checkout artifacts_copy -- *.zip
       - run: git branch --delete artifacts_copy
       - run: git push --force
       - uses: rymndhng/release-on-push-action@master
