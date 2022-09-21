@@ -15,17 +15,15 @@ jobs:
         with:
           fetch-depth: 0
       - run: git checkout artifacts
-      - run: git branch artifacts_copy
-      - run: git checkout artifacts_copy
-      - run: git branch --delete artifacts
-      - run: git checkout -b artifacts
-      - run: git config --global user.email "ios@hedvig.com"
-      - run: git config --global user.name "Hedvig iOS"
-      - run: git checkout artifacts_copy -- *.zip
-      - run: git add .
-      - run: git commit -m "Reset head"
-      - run: git branch --delete artifacts_copy
-      - run: git push --set-upstream origin artifacts --force
-      - uses: rymndhng/release-on-push-action@master
-        with:
-          bump_version_scheme: minor
+      - uses: fwilhe2/bump-version@main
+        id: bump
+      - run: |
+          set -x
+          assets=()
+          for asset in ./*.zip; do
+            assets+=("-a" "$asset")
+          done
+          tag_name="${GITHUB_REF##*/}"
+          hub release create "${assets[@]}" -m "${{ steps.bump.outputs.newVersion }}" "${{ steps.bump.outputs.newVersion }}"
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
