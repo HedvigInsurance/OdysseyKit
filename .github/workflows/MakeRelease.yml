@@ -30,7 +30,6 @@ jobs:
       - run: git checkout main
       - name: Update Package.swift
         run: |
-
         function replaceURL {
           BASE_URL="https:\/\/github.com\/HedvigInsurance\/OdysseyKit\/releases\/download\/${{ steps.bump.outputs.newVersion }}\/$1"
           sed -i '' "s/url: \".*\",\/\/ $2 URL/url: \"$BASE_URL\/$2.xcframework.zip\",\/\/ $2 URL/g" Package.swift
