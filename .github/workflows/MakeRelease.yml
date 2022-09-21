@@ -14,9 +14,9 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - run: git checkout artifacts
       - uses: fwilhe2/bump-version@main
         id: bump
+      - run: git checkout artifacts
       - run: |
           set -x
           assets=()
