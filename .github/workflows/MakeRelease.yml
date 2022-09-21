@@ -14,9 +14,10 @@ jobs:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Get next version
+      - uses: MeilCli/bump-release-action@v1
         id: bump
-        uses: technote-space/get-next-version-action@v1
+        with:
+          dry_run: true
       - run: |
           set -x
           assets=()
@@ -24,7 +25,7 @@ jobs:
             assets+=("-a" "$asset")
           done
           tag_name="${GITHUB_REF##*/}"
-          hub release create "${assets[@]}" -m "${{ steps.bump.outputs.next }}" "${{ steps.bump.outputs.next }}"
+          hub release create "${assets[@]}" -m "${{ steps.bump.outputs.next_version }}" "${{ steps.bump.outputs.next_version }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Update Package.swift
@@ -34,12 +35,12 @@ jobs:
             sed -i '' "s/url: \".*\",\/\/ $2 URL/url: \"$BASE_URL\/$2.xcframework.zip\",\/\/ $2 URL/g" Package.swift
           }
 
-          replaceURL "${{ steps.bump.outputs.next }}" "Odyssey"
-          replaceURL "${{ steps.bump.outputs.next }}" "OdysseyKit"
-          replaceURL "${{ steps.bump.outputs.next }}" "KMPNativeCoroutinesCore"
-          replaceURL "${{ steps.bump.outputs.next }}" "KMPNativeCoroutinesAsync"
-          replaceURL "${{ steps.bump.outputs.next }}" "SVGView"
-          replaceURL "${{ steps.bump.outputs.next }}" "UIPilot"
+          replaceURL "${{ steps.bump.outputs.next_version }}" "Odyssey"
+          replaceURL "${{ steps.bump.outputs.next_version }}" "OdysseyKit"
+          replaceURL "${{ steps.bump.outputs.next_version }}" "KMPNativeCoroutinesCore"
+          replaceURL "${{ steps.bump.outputs.next_version }}" "KMPNativeCoroutinesAsync"
+          replaceURL "${{ steps.bump.outputs.next_version }}" "SVGView"
+          replaceURL "${{ steps.bump.outputs.next_version }}" "UIPilot"
       - name: Update resources
         uses: test-room-7/action-update-file@v1
         with:
