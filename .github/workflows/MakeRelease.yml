@@ -3,7 +3,7 @@ name: Make release tag
 on:
   push:
     branches:
-      - artifacts/*
+      - artifacts-*
 
 jobs:
   release-on-push:
