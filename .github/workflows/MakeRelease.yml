@@ -1,6 +1,6 @@
 name: Make release tag
 
-on: 
+on:
   push:
     branches:
       - main
@@ -11,6 +11,13 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
+      - run: git checkout artifacts
+      - run: git branch artifacts_copy
+      - run: git branch --delete artifacts
+      - run: git checkout -b artifacts
+      - run: git cherry-pick artifacts_copy
+      - run: git branch --delete artifacts_copy
+      - run: git push --force
       - uses: rymndhng/release-on-push-action@master
         with:
           bump_version_scheme: minor
