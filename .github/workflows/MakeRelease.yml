@@ -27,3 +27,32 @@ jobs:
           hub release create "${assets[@]}" -m "${{ steps.bump.outputs.newVersion }}" "${{ steps.bump.outputs.newVersion }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - run: git checkout main
+      - name: Update Package.swift
+        run: |
+
+        function replaceURL {
+          BASE_URL="https:\/\/github.com\/HedvigInsurance\/OdysseyKit\/releases\/download\/${{ steps.bump.outputs.newVersion }}\/$1"
+          sed -i '' "s/url: \".*\",\/\/ $2 URL/url: \"$BASE_URL\/$2.xcframework.zip\",\/\/ $2 URL/g" Package.swift
+        }
+
+        replaceURL "${{ steps.bump.outputs.newVersion }}" "Odyssey"
+        replaceURL "${{ steps.bump.outputs.newVersion }}" "OdysseyKit"
+        replaceURL "${{ steps.bump.outputs.newVersion }}" "KMPNativeCoroutinesCore"
+        replaceURL "${{ steps.bump.outputs.newVersion }}" "KMPNativeCoroutinesAsync"
+        replaceURL "${{ steps.bump.outputs.newVersion }}" "SVGView"
+        replaceURL "${{ steps.bump.outputs.newVersion }}" "UIPilot"
+        replaceURL "${{ steps.bump.outputs.newVersion }}" "FlexboxSwiftUI"
+        replaceURL "${{ steps.bump.outputs.newVersion }}" "FlexboxSwiftUIObjC"
+        replaceURL "${{ steps.bump.outputs.newVersion }}" "Placement"
+      - name: Update resources
+        uses: test-room-7/action-update-file@v1
+        with:
+            file-path: Package.swift
+            commit-msg: Update Package.swift
+            github-token: ${{ secrets.GITHUB_TOKEN }}
+      - name: Delete branch
+        uses: dawidd6/action-delete-branch@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          branches: artifacts
