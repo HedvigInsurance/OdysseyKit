@@ -23,7 +23,7 @@ jobs:
       - run: git config --global user.name "Hedvig iOS"
       - run: git checkout artifacts_copy -- *.zip
       - run: git branch --delete artifacts_copy
-      - run: git push --force
+      - run: git push --set-upstream origin artifacts --force
       - uses: rymndhng/release-on-push-action@master
         with:
           bump_version_scheme: minor
