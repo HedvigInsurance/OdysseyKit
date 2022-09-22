@@ -11,9 +11,12 @@ jobs:
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
-      - uses: actions/checkout@v2
+      - name: "Checkout"
+        uses: actions/checkout@v2
         with:
-          fetch-depth: 0
+          lfs: true
+      - name: Checkout LFS objects
+        run: git lfs checkout
       - name: get next version
         id: "bump"
         uses: allegro-actions/next-version@v1
