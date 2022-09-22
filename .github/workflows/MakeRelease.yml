@@ -7,21 +7,23 @@ on:
 
 jobs:
   release-on-push:
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     env:
       GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
     steps:
       - uses: actions/checkout@v2
         with:
           fetch-depth: 0
-      - name: Get next version
-        uses: anothrNick/github-tag-action@1.40.0
-        id: bump
+     - name: 'Get Previous tag'
+        id: previoustag
+        uses: "WyriHaximus/github-action-get-previous-tag@v1"
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          WITH_V: true
-          DRY_RUN: true
-          RELEASE_BRANCHES: artifacts-.*
+          GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
+      - name: 'Get next major version'
+        id: semvers
+        uses: "WyriHaximus/github-action-next-semvers@v1"
+        with:
+          version: ${{ steps.previoustag.outputs.tag }}
       - run: |
           set -x
           assets=()
@@ -29,7 +31,7 @@ jobs:
             assets+=("-a" "$asset")
           done
           tag_name="${GITHUB_REF##*/}"
-          hub release create "${assets[@]}" -m "${{ steps.bump.outputs.new_tag }}" "${{ steps.bump.outputs.new_tag }}"
+          hub release create "${assets[@]}" -m "${{ steps.semvers.outputs.v_major }}" "${{ steps.semvers.outputs.v_major }}"
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Update Package.swift
@@ -39,16 +41,16 @@ jobs:
             sed -i "s/url: \".*\",\/\/ $2 URL/url: \"$BASE_URL\/$2.xcframework.zip\",\/\/ $2 URL/g" Package.swift
           }
 
-          replaceURL "${{ steps.bump.outputs.new_tag }}" "Odyssey"
-          replaceURL "${{ steps.bump.outputs.new_tag }}" "OdysseyKit"
-          replaceURL "${{ steps.bump.outputs.new_tag }}" "KMPNativeCoroutinesCore"
-          replaceURL "${{ steps.bump.outputs.new_tag }}" "KMPNativeCoroutinesAsync"
-          replaceURL "${{ steps.bump.outputs.new_tag }}" "SVGView"
-          replaceURL "${{ steps.bump.outputs.new_tag }}" "UIPilot"
-          replaceURL "${{ steps.bump.outputs.new_tag }}" "FlexboxSwiftUI"
-          replaceURL "${{ steps.bump.outputs.new_tag }}" "FlexboxSwiftUIObjC"
-          replaceURL "${{ steps.bump.outputs.new_tag }}" "Placement"
-          replaceURL "${{ steps.bump.outputs.new_tag }}" "Yoga"
+          replaceURL "${{ steps.semvers.outputs.v_major }}" "Odyssey"
+          replaceURL "${{ steps.semvers.outputs.v_major }}" "OdysseyKit"
+          replaceURL "${{ steps.semvers.outputs.v_major }}" "KMPNativeCoroutinesCore"
+          replaceURL "${{ steps.semvers.outputs.v_major }}" "KMPNativeCoroutinesAsync"
+          replaceURL "${{ steps.semvers.outputs.v_major }}" "SVGView"
+          replaceURL "${{ steps.semvers.outputs.v_major }}" "UIPilot"
+          replaceURL "${{ steps.semvers.outputs.v_major }}" "FlexboxSwiftUI"
+          replaceURL "${{ steps.semvers.outputs.v_major }}" "FlexboxSwiftUIObjC"
+          replaceURL "${{ steps.semvers.outputs.v_major }}" "Placement"
+          replaceURL "${{ steps.semvers.outputs.v_major }}" "Yoga"
       - name: Update resources
         uses: test-room-7/action-update-file@v1
         with:
