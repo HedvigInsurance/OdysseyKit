@@ -1,4 +1,4 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.7
 import PackageDescription
 
 let package = Package(
@@ -44,6 +44,26 @@ let package = Package(
             url: "https://github.com/HedvigInsurance/OdysseyKit/raw/dc2aa958f7191b801d36e9c6485ae1e14f99e139/UIPilot.xcframework.zip",// UIPilot URL
             checksum: "ac3f0af9b6af50a7dce3d22b2ae2b17bf76601b1fda06aeb48acbc936657e609"// UIPilot Checksum
         ),
+        .binaryTarget(
+            name: "FlexboxSwiftUI",
+            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v0.80.0-beta.4/UIPilot.xcframework.zip",// FlexboxSwiftUI URL
+            checksum: "ae3a15fb05443e4a33d269af3c577001f692b3ac4f21f62de1f2c529e8a59a84"// FlexboxSwiftUI Checksum
+        ),
+        .binaryTarget(
+            name: "FlexboxSwiftUIObjC",
+            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v0.80.0-beta.4/UIPilot.xcframework.zip",// FlexboxSwiftUIObjC URL
+            checksum: "ae3a15fb05443e4a33d269af3c577001f692b3ac4f21f62de1f2c529e8a59a84"// FlexboxSwiftUIObjC Checksum
+        ),
+        .binaryTarget(
+            name: "Placement",
+            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v0.80.0-beta.4/UIPilot.xcframework.zip",// Placement URL
+            checksum: "ae3a15fb05443e4a33d269af3c577001f692b3ac4f21f62de1f2c529e8a59a84"// Placement Checksum
+        ),
+        .binaryTarget(
+            name: "Yoga",
+            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v0.80.0-beta.4/UIPilot.xcframework.zip",// Yoga URL
+            checksum: "ae3a15fb05443e4a33d269af3c577001f692b3ac4f21f62de1f2c529e8a59a84"// Yoga Checksum
+        ),
         .target(
             name: "OdysseyKitTargets",
             dependencies: [
@@ -51,7 +71,11 @@ let package = Package(
                .target(name: "Odyssey"),
                .target(name: "KMPNativeCoroutinesCore"),
                .target(name: "KMPNativeCoroutinesAsync"),
-               .target(name: "SVGView")
+               .target(name: "SVGView"),
+               .target(name: "FlexboxSwiftUI"),
+               .target(name: "FlexboxSwiftUIObjC"),
+               .target(name: "Placement"),
+               .target(name: "Yoga")
             ],
             path: "OdysseyKitTargets"
         )
