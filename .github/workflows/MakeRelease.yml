@@ -45,6 +45,10 @@ jobs:
           replaceURL "${{ steps.bump.outputs.new_tag }}" "KMPNativeCoroutinesAsync"
           replaceURL "${{ steps.bump.outputs.new_tag }}" "SVGView"
           replaceURL "${{ steps.bump.outputs.new_tag }}" "UIPilot"
+          replaceURL "${{ steps.bump.outputs.new_tag }}" "FlexboxSwiftUI"
+          replaceURL "${{ steps.bump.outputs.new_tag }}" "FlexboxSwiftUIObjC"
+          replaceURL "${{ steps.bump.outputs.new_tag }}" "Placement"
+          replaceURL "${{ steps.bump.outputs.new_tag }}" "Yoga"
       - name: Update resources
         uses: test-room-7/action-update-file@v1
         with:
