@@ -75,7 +75,8 @@ let package = Package(
                .target(name: "FlexboxSwiftUI"),
                .target(name: "FlexboxSwiftUIObjC"),
                .target(name: "Placement"),
-               .target(name: "Yoga")
+               .target(name: "Yoga"),
+               .target(name: "UIPilot")
             ],
             path: "OdysseyKitTargets"
         )
