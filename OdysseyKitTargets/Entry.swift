@@ -1,7 +1,6 @@
 import Foundation
-import SVGView
-import UIPilot
 import OdysseyKit
+import Odyssey
 
 struct Entry {
     
