@@ -17,12 +17,12 @@ let package = Package(
         .binaryTarget(
             name: "OdysseyKit",
             url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.1.0-beta.37/OdysseyKit.xcframework.zip",// OdysseyKit URL
-            checksum: "b339e61316276a22221d5458654de9b7248349c457ff3e72cd9d94263812499a"// OdysseyKit Checksum
+            checksum: "c73c656a5a31dc786095d0986d0c4806ad28999d202a4587d59bd63a3db1e939"// OdysseyKit Checksum
         ),
         .binaryTarget(
             name: "Odyssey",
             url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.1.0-beta.37/Odyssey.xcframework.zip",// Odyssey URL
-            checksum: "4b7840b1cd086ba7144163b7b38550fa0ad9b8a2069121daa81fcdd49a37ea74"// Odyssey Checksum
+            checksum: "3bc299da13315b97c45bc7e24a4c00c2a663fd5c1f4dbe748ebca21b7534fca3"// Odyssey Checksum
         ),
         .binaryTarget(
             name: "KMPNativeCoroutinesCore",
