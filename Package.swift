@@ -17,12 +17,12 @@ let package = Package(
         .binaryTarget(
             name: "OdysseyKit",
             url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.1.0-beta.17/OdysseyKit.xcframework.zip",// OdysseyKit URL
-            checksum: "70e0b677be721de85b738f98a1bd073c0d973af74a15dda3e00e1e2d81c0721a"// OdysseyKit Checksum
+            checksum: "d8542e613c59849032645724fcb4b73ce4de6e247452b375eceac6e5b21aa701"// OdysseyKit Checksum
         ),
         .binaryTarget(
             name: "Odyssey",
             url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.1.0-beta.17/Odyssey.xcframework.zip",// Odyssey URL
-            checksum: "cd3c1ee4345e0213c7000a5304facfc5dbbd5ccd51308fc0a261d46ec716aec6"// Odyssey Checksum
+            checksum: "1f15a7234a1be42b711a1e016e3b35f4dbf4ff2f44546aa803d75a6c2e548eda"// Odyssey Checksum
         ),
         .target(
             name: "OdysseyKitTargets",
