@@ -16,53 +16,53 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "OdysseyKit",
-            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.80.0/OdysseyKit.xcframework.zip",// OdysseyKit URL
-            checksum: "938a32d6db7b09f886715d4a873ea13b655cb0ae1fd28e27a53d515d01a4c91c"// OdysseyKit Checksum
+            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.81.0/OdysseyKit.xcframework.zip",// OdysseyKit URL
+            checksum: "90c1d5de6224a2015dacdc43cf176d703acb71fe5aa4123f130a120fc4da7b32"// OdysseyKit Checksum
         ),
         .binaryTarget(
             name: "Odyssey",
-            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.80.0/Odyssey.xcframework.zip",// Odyssey URL
-            checksum: "6c8fba3f329d3d735515838b988832f92454266088fd5d6019bd3c539e6ab61b"// Odyssey Checksum
+            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.81.0/Odyssey.xcframework.zip",// Odyssey URL
+            checksum: "48663611a7c825152f8e3aa8f3dcf0705decb5700a1f75c023aeca211a840a13"// Odyssey Checksum
         ),
         .binaryTarget(
             name: "KMPNativeCoroutinesCore",
-            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.80.0/KMPNativeCoroutinesCore.xcframework.zip",// KMPNativeCoroutinesCore URL
-            checksum: "81a3423bcba7e445a0ff76bb169329d05f455887ce40c63b9c50cfe8e724ce0d"// KMPNativeCoroutinesCore Checksum
+            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.81.0/KMPNativeCoroutinesCore.xcframework.zip",// KMPNativeCoroutinesCore URL
+            checksum: "d0034bde5ea4bc5f1f1c18e889a630f890dd234f6c378573cd9b84471e4bc41a"// KMPNativeCoroutinesCore Checksum
         ),
         .binaryTarget(
             name: "KMPNativeCoroutinesAsync",
-            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.80.0/KMPNativeCoroutinesAsync.xcframework.zip",// KMPNativeCoroutinesAsync URL
-            checksum: "b3edb90fc4d02a688302bb7274d9657c81ed75cf3f051907909cb14e2e578e0f"// KMPNativeCoroutinesAsync Checksum
+            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.81.0/KMPNativeCoroutinesAsync.xcframework.zip",// KMPNativeCoroutinesAsync URL
+            checksum: "f3677d4015adc584afa349adbd5a3ae47be28530266e7f4cfb00e613c46ad4b5"// KMPNativeCoroutinesAsync Checksum
         ),
         .binaryTarget(
             name: "SVGView",
-            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.80.0/SVGView.xcframework.zip",// SVGView URL
-            checksum: "c7990aa31f066c12a21189e83326aad466670211929adc3a6ca6876103c1f5b5"// SVGView Checksum
+            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.81.0/SVGView.xcframework.zip",// SVGView URL
+            checksum: "3abd8ffec36ccdbf9bb112aa2be73bf58cf86f6179b3d98cd8e6b2715a7488e3"// SVGView Checksum
         ),
         .binaryTarget(
             name: "UIPilot",
-            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.80.0/UIPilot.xcframework.zip",// UIPilot URL
-            checksum: "fc60e1a97fc6009b6d5a4b35d6d946865713e7f0d54d94feed732da5d13d9be3"// UIPilot Checksum
+            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.81.0/UIPilot.xcframework.zip",// UIPilot URL
+            checksum: "c725b5453f21875233ee6e4e69da62fa765368dadd188de514bf3b0d0edc7cae"// UIPilot Checksum
         ),
         .binaryTarget(
             name: "FlexboxSwiftUI",
-            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.80.0/FlexboxSwiftUI.xcframework.zip",// FlexboxSwiftUI URL
-            checksum: "18a81e6ee30d2463d8e3abfb9efb4e276e16140feec6201e9c706b74590cede7"// FlexboxSwiftUI Checksum
+            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.81.0/FlexboxSwiftUI.xcframework.zip",// FlexboxSwiftUI URL
+            checksum: "0d45b0f5de1bb3715b1b183ebbe2e7a567163f1f2d8a7df91fd5de24404c0afd"// FlexboxSwiftUI Checksum
         ),
         .binaryTarget(
             name: "FlexboxSwiftUIObjC",
-            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.80.0/FlexboxSwiftUIObjC.xcframework.zip",// FlexboxSwiftUIObjC URL
-            checksum: "021edd71aad3bffac6129eff677be764908d14688883f8587d429fe777b86ef4"// FlexboxSwiftUIObjC Checksum
+            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.81.0/FlexboxSwiftUIObjC.xcframework.zip",// FlexboxSwiftUIObjC URL
+            checksum: "4d1bcacae1a96e813e10f78928e8b709ab4654807338bfc083de0614bff31941"// FlexboxSwiftUIObjC Checksum
         ),
         .binaryTarget(
             name: "Placement",
-            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.80.0/Placement.xcframework.zip",// Placement URL
-            checksum: "6ed605f40bc3427fd465724d48e1b580515a926269a64e1f1ad304eb133eb4e9"// Placement Checksum
+            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.81.0/Placement.xcframework.zip",// Placement URL
+            checksum: "5da999eca80230fbea5adc2e7f0e8b474a009b8228f57e0a428d19c03ca5694b"// Placement Checksum
         ),
         .binaryTarget(
             name: "Yoga",
-            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.80.0/Yoga.xcframework.zip",// Yoga URL
-            checksum: "9bbafea2868c643717a7143ec3f493f5a9434127f58d8c7dab6949c94b7cbdf0"// Yoga Checksum
+            url: "https://github.com/HedvigInsurance/OdysseyKit/releases/download/v1.81.0/Yoga.xcframework.zip",// Yoga URL
+            checksum: "d611b3a55a37e2359a021385c1c43263e8e5f24ae03c6686fd266c62deabb7fa"// Yoga Checksum
         ),
         .target(
             name: "OdysseyKitTargets",
